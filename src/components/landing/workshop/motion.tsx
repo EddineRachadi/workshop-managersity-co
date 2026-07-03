@@ -70,7 +70,7 @@ export function BackToTop() {
       aria-label="Retour en haut de page"
       tabIndex={visible ? 0 : -1}
       className={cn(
-        "btn-motion fixed bottom-6 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-brand-green text-white shadow-[0_12px_30px_-10px_rgba(17,76,1,0.6)] transition-all duration-300 hover:bg-brand-green-light sm:bottom-8 sm:right-8",
+        "fixed bottom-6 right-5 z-[60] flex h-12 w-12 items-center justify-center rounded-full border-2 border-white/70 bg-brand-green text-white shadow-[0_12px_30px_-8px_rgba(17,76,1,0.75)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-green-light sm:bottom-8 sm:right-8",
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-4 opacity-0"
