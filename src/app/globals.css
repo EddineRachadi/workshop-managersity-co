@@ -29,6 +29,10 @@
   --color-paper-line: #E7E4DA;
   --color-ink: #14181E;
 
+  /* Vert de marque — boutons principaux et accents forts */
+  --color-brand-green: #114C01;
+  --color-brand-green-light: #1B7002;
+
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
   /* Display serif (Fraunces) + utilitaire mono (JetBrains) — chargés sur /workshop-ia */
   --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, "Times New Roman", serif;
@@ -182,7 +186,7 @@ html {
 }
 
 .workshop .brand-gradient {
-  background-image: linear-gradient(135deg, #15130f 0%, #2f3f1f 62%, #5d7f2f 100%);
+  background-image: linear-gradient(135deg, #0c3701 0%, #114c01 55%, #1b7002 100%);
 }
 
 /* Serif display (Fraunces) sur tous les titres + classe utilitaire dédiée.

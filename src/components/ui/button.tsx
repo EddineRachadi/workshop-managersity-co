@@ -12,7 +12,7 @@ interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
     "brand-gradient text-white shadow-sm hover:opacity-95 hover:shadow-md",
-  navy: "bg-navy text-white shadow-sm hover:bg-navy-soft",
+  navy: "bg-brand-green text-white shadow-sm hover:bg-brand-green-light",
   ghost: "text-navy hover:bg-surface",
   outline:
     "border border-white/30 text-white hover:bg-white/10",
