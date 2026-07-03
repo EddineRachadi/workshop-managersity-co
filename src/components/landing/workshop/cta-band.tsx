@@ -31,7 +31,7 @@ export function WorkshopCtaBand({
                 </p>
               )}
             </div>
-            <ButtonLink href="#inscription" size="lg" className="shrink-0 rounded-full">
+            <ButtonLink href="#formules" size="lg" className="shrink-0 rounded-full">
               Réserver ma place
             </ButtonLink>
           </div>

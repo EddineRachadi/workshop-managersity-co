@@ -2,9 +2,9 @@
  * Données de l'offre Workshop IA MANAGERSITY — « Recruter ses employés IA dans
  * son métier ». Source unique pour les infos pratiques et les liens d'inscription.
  *
- * À COMPLÉTER : les liens `liens.*` pointent pour l'instant vers l'ancre
- * d'inscription. Remplacez-les par les vraies URL de paiement / checkout
- * (Kartra ou autre) lorsqu'elles sont prêtes.
+ * À COMPLÉTER : les liens `liens.*` sont des placeholders vers la boutique.
+ * Remplacez-les par les vraies URL de la fiche produit shop.managersity.co
+ * correspondant à chaque formule.
  */
 export const WORKSHOP = {
   titre: "Workshop IA MANAGERSITY — Recruter ses employés IA dans son métier",
@@ -16,9 +16,9 @@ export const WORKSHOP = {
     standard: "59 000 FCFA",
     premium: "97 000 FCFA",
   },
-  // Liens d'inscription / checkout — À COMPLÉTER avant la mise en ligne.
+  // Liens boutique (checkout) par formule — À COMPLÉTER avec les vraies URL.
   liens: {
-    standard: "#inscription",
-    premium: "#inscription",
+    standard: "https://shop.managersity.co",
+    premium: "https://shop.managersity.co",
   },
 } as const;

@@ -25,7 +25,7 @@ const sizeStyles: Record<ButtonSize, string> = {
 };
 
 /**
- * CTA principal de la landing : un lien stylé en bouton (ancre vers #inscription).
+ * CTA principal de la landing : un lien stylé en bouton.
  */
 export const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
   ({ className, variant = "primary", size = "md", ...props }, ref) => {

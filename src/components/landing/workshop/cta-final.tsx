@@ -30,7 +30,7 @@ export function WorkshopCtaFinal() {
           className="ws-rise mt-10 flex flex-col sm:flex-row sm:items-center gap-5"
           style={{ ["--ws-delay" as string]: "270ms" }}
         >
-          <ButtonLink href="#inscription" size="lg">
+          <ButtonLink href="#formules" size="lg">
             Réserver ma place
           </ButtonLink>
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/45">

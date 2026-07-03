@@ -11,7 +11,6 @@ import { WorkshopEmployesIa } from "@/components/landing/workshop/employes-ia";
 import { WorkshopProgramme } from "@/components/landing/workshop/programme";
 import { WorkshopInclus } from "@/components/landing/workshop/inclus";
 import { WorkshopFormules } from "@/components/landing/workshop/formules";
-import { WorkshopInscription } from "@/components/landing/workshop/inscription";
 import { WorkshopComparaison } from "@/components/landing/workshop/comparaison";
 import { WorkshopPourQui } from "@/components/landing/workshop/pour-qui";
 import { WorkshopPasPourVous } from "@/components/landing/workshop/pas-pour-vous";
@@ -91,7 +90,6 @@ export default function Home() {
         />
         <WorkshopInclus />
         <WorkshopFormules />
-        <WorkshopInscription />
         <WorkshopComparaison />
         <WorkshopPourQui />
         <WorkshopPasPourVous />
