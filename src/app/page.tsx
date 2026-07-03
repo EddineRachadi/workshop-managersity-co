@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, JetBrains_Mono } from "next/font/google";
 import { WorkshopHeader } from "@/components/landing/workshop/workshop-header";
-import { ScrollProgress } from "@/components/landing/workshop/motion";
+import { ScrollProgress, BackToTop } from "@/components/landing/workshop/motion";
 import { WorkshopHero } from "@/components/landing/workshop/hero";
 import { WorkshopChiffres } from "@/components/landing/workshop/chiffres";
 import { WorkshopProbleme } from "@/components/landing/workshop/probleme";
@@ -98,6 +98,7 @@ export default function Home() {
         <WorkshopCtaFinal />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
 /** Fine barre de progression de lecture en haut de page. */
 export function ScrollProgress() {
@@ -33,6 +34,52 @@ export function ScrollProgress() {
       className="fixed inset-x-0 top-0 z-[60] h-[3px] bg-gold ws-progress"
       style={{ ["--ws-scroll" as string]: progress }}
     />
+  );
+}
+
+/** Bouton flottant « retour en haut » — apparaît après un certain défilement. */
+export function BackToTop() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    let raf = 0;
+    const update = () => {
+      setVisible(window.scrollY > 600);
+      raf = 0;
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={scrollToTop}
+      aria-label="Retour en haut de page"
+      tabIndex={visible ? 0 : -1}
+      className={cn(
+        "btn-motion fixed bottom-6 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-brand-green text-white shadow-[0_12px_30px_-10px_rgba(17,76,1,0.6)] transition-all duration-300 hover:bg-brand-green-light sm:bottom-8 sm:right-8",
+        visible
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none translate-y-4 opacity-0"
+      )}
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 19V5m0 0l-6 6m6-6l6 6" />
+      </svg>
+    </button>
   );
 }
 
