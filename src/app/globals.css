@@ -1,0 +1,539 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand — repris du logo MANAGERSITY (vert foncé → olive → or) */
+  --color-green-dark: #2E5A1C;
+  --color-green: #5A8A2E;
+  --color-gold: #C9A227;
+
+  /* Structure — bleu marine pour le sérieux et la hiérarchie */
+  --color-navy: #0A2342;
+  --color-navy-soft: #13315C;
+
+  /* Neutres */
+  --color-surface: #F6F8F4;
+  --color-surface-alt: #EEF3E9;
+  --color-text: #18211A;
+  --color-muted: #5B6470;
+  --color-line: #E4E8DF;
+
+  /* États */
+  --color-success: #2E7D32;
+  --color-error: #C0392B;
+
+  --color-background: #FFFFFF;
+  --color-foreground: #18211A;
+
+  /* Page Workshop — papier chaud + encre profonde (identité éditoriale dédiée) */
+  --color-paper: #FAFAF7;
+  --color-paper-line: #E7E4DA;
+  --color-ink: #14181E;
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  /* Display serif (Fraunces) + utilitaire mono (JetBrains) — chargés sur /workshop-ia */
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 2px;
+}
+
+/* Dégradé de marque réutilisable */
+.brand-gradient {
+  background-image: linear-gradient(110deg, var(--color-green-dark) 0%, var(--color-green) 55%, var(--color-gold) 100%);
+}
+
+.brand-text-gradient {
+  background-image: linear-gradient(110deg, var(--color-green-dark) 0%, var(--color-green) 55%, var(--color-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Apparition douce au scroll */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  animation: reveal-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* ——————————————————————————————————————————————
+   Page Workshop — identité éditoriale « Le Dossier »
+   (scopée sous .workshop, sans effet sur la home)
+   —————————————————————————————————————————————— */
+.workshop {
+  --color-green-dark: #213d16;
+  --color-green: #5d7f2f;
+  --color-gold: #c6a348;
+  --color-navy: #15130f;
+  --color-navy-soft: #242019;
+  --color-paper: #fbf2df;
+  --color-paper-line: #e6d7bd;
+  --color-surface: #fffaf0;
+  --color-surface-alt: #f3e6cf;
+  --color-muted: #655f53;
+  --color-ink: #15130f;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.workshop .brand-gradient {
+  background-image: linear-gradient(135deg, #15130f 0%, #2f3f1f 62%, #5d7f2f 100%);
+}
+
+/* Serif display (Fraunces) sur tous les titres + classe utilitaire dédiée.
+   On référence --font-fraunces (injecté par next/font) directement : le token
+   Tailwind --font-display est tree-shaké car aucun utilitaire ne le consomme. */
+.workshop h1,
+.workshop h2,
+.workshop h3,
+.workshop blockquote,
+.workshop .font-display {
+  font-family: var(--font-fraunces), "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-optical-sizing: auto;
+}
+
+/* Étiquettes / données en mono (JetBrains) */
+.workshop .font-mono {
+  font-family: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* Quadrillage millimétré très discret pour les surfaces « papier technique » */
+.dossier-grid {
+  background-image:
+    linear-gradient(to right, rgba(20, 24, 30, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 24, 30, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Même quadrillage en version claire sur fond navy (hero) */
+.dossier-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* ——————————————————————————————————————————————
+   Motion (page workshop) — animations sobres, désactivées
+   automatiquement si prefers-reduced-motion: reduce
+   —————————————————————————————————————————————— */
+
+/* Barre de progression de lecture */
+.ws-progress {
+  transform: scaleX(var(--ws-scroll, 0));
+  transform-origin: left;
+  will-change: transform;
+}
+
+/* Reflet discret sur les CTA, utilisable sur tout le site. */
+.btn-motion {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.btn-motion::after {
+  content: "";
+  position: absolute;
+  inset: -45% -80%;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.34) 50%, transparent 65%);
+  transform: translateX(-55%) rotate(4deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-motion:hover::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Entrée orchestrée (chargement) — utilisée dans le hero */
+  .ws-rise {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: ws-rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--ws-delay, 0ms);
+  }
+  @keyframes ws-rise {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .reveal.is-visible .ws-draw-line,
+  .ws-rise .ws-draw-line {
+    animation: ws-draw-line 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .ws-draw-line {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  @keyframes ws-draw-line {
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .btn-motion::after {
+    animation: ws-button-sheen 3.8s ease-in-out infinite;
+  }
+  .btn-motion:hover {
+    transform: translateY(-2px);
+  }
+  @keyframes ws-button-sheen {
+    0%,
+    45% {
+      opacity: 0;
+      transform: translateX(-55%) rotate(4deg);
+    }
+    58% {
+      opacity: 0.85;
+    }
+    78%,
+    100% {
+      opacity: 0;
+      transform: translateX(55%) rotate(4deg);
+    }
+  }
+
+  .ws-grid-drift {
+    animation: ws-grid-drift 28s linear infinite;
+  }
+  @keyframes ws-grid-drift {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 60px 60px;
+    }
+  }
+
+  /* Halos décoratifs qui dérivent doucement */
+  .ws-float {
+    animation: ws-float 16s ease-in-out infinite;
+  }
+  .ws-float-slow {
+    animation: ws-float 22s ease-in-out infinite;
+  }
+  @keyframes ws-float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -26px, 0);
+    }
+  }
+
+  .ws-panel-scan {
+    position: relative;
+    overflow: hidden;
+  }
+  .ws-panel-scan::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.08) 45%, transparent 62%);
+    transform: translateX(-120%);
+    animation: ws-panel-scan 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes ws-panel-scan {
+    0%,
+    38% {
+      transform: translateX(-120%);
+    }
+    62%,
+    100% {
+      transform: translateX(120%);
+    }
+  }
+
+  .ws-flow-line::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
+    transform: translateY(-100%);
+    animation: ws-flow-line 3.4s ease-in-out infinite;
+  }
+  @keyframes ws-flow-line {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    20%,
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+
+  .ws-flow-step {
+    opacity: 0;
+    transform: translateX(12px);
+    animation: ws-flow-step 0.62s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--ws-delay, 0ms);
+  }
+  .ws-flow-step > span:first-child {
+    animation: ws-dot-pulse 2.8s ease-in-out infinite;
+  }
+  @keyframes ws-flow-step {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes ws-dot-pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.08);
+    }
+    50% {
+      box-shadow: 0 0 0 7px rgba(201, 162, 39, 0.16);
+    }
+  }
+
+  .ws-stat-tile {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: ws-stat-tile 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--ws-delay, 0ms);
+    transition: background-color 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .ws-stat-tile:hover {
+    background-color: white;
+    transform: translateY(-3px);
+  }
+  @keyframes ws-stat-tile {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .ws-border-glow {
+    position: relative;
+  }
+  .ws-border-glow::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-green), var(--color-gold));
+    transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .ws-border-glow:hover::before {
+    width: 100%;
+  }
+
+  .ws-card-sheen {
+    position: relative;
+  }
+  .ws-card-sheen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(125deg, transparent 30%, rgba(201, 162, 39, 0.11) 48%, transparent 62%);
+    transform: translateX(-115%);
+    transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+  .ws-card-sheen:hover::after {
+    transform: translateX(115%);
+  }
+
+  /* Animation au chargement (CSS pur, indépendante du JS) : le contenu finit
+     toujours visible grâce à animation-fill-mode: both. */
+  .ws-list-stagger > li,
+  .ws-inclusion-row,
+  .ws-table-row {
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: ws-list-in 0.52s cubic-bezier(0.22, 1, 0.36, 1)
+      var(--ws-delay, 0ms) both;
+  }
+  @keyframes ws-list-in {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .ws-inclusion-row {
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+  }
+  .ws-inclusion-row:hover {
+    background-color: rgba(246, 248, 244, 0.8);
+    padding-left: 0.75rem;
+  }
+
+  .ws-table-row {
+    transition: background-color 0.2s ease;
+  }
+  .ws-table-row:hover {
+    background-color: rgba(238, 243, 233, 0.8);
+  }
+
+  .ws-price-pulse {
+    animation: ws-price-pulse 4.8s ease-in-out infinite;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+  }
+  .ws-price-pulse:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 28px 70px -34px rgba(10, 35, 66, 0.72);
+  }
+  @keyframes ws-price-pulse {
+    0%,
+    100% {
+      box-shadow: 0 24px 60px -32px rgba(10, 35, 66, 0.5);
+    }
+    50% {
+      box-shadow: 0 30px 74px -34px rgba(10, 35, 66, 0.74);
+    }
+  }
+
+  /* Filet d'eyebrow qui se dessine au survol de la carte parente */
+  .ws-tape {
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 0.5s ease;
+  }
+  .group:hover .ws-tape {
+    background-position: 0 0;
+  }
+
+  /* Bandeau défilant (profils) */
+  .ws-marquee {
+    animation: ws-marquee 38s linear infinite;
+  }
+  .ws-marquee-mask:hover .ws-marquee {
+    animation-play-state: paused;
+  }
+  @keyframes ws-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Lift au survol — micro-interaction premium (transition douce) */
+.ws-lift {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.ws-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* ——————————————————————————————————————————————
+   FIABILITÉ MOBILE : sur la page workshop, les blocs .reveal sont animés
+   par CSS pur au chargement (fill-mode both) et NE dépendent donc plus du
+   JavaScript. Même si le JS est lent, absent ou bloqué (vieux Safari,
+   mode dev sur mobile), le contenu finit toujours par s'afficher.
+   —————————————————————————————————————————————— */
+@media (prefers-reduced-motion: no-preference) {
+  .workshop .reveal,
+  .workshop .reveal.is-visible {
+    animation: reveal-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* Ouverture douce des réponses FAQ (accordéon natif <details>) */
+  .workshop details[open] .ws-faq-answer {
+    animation: ws-faq-in 0.28s ease;
+  }
+  @keyframes ws-faq-in {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .workshop .reveal {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* FAQ : masquer explicitement la réponse quand la question est fermée
+   (fiable sur tous les navigateurs ; l'élément <details> natif ré-affiche à
+   l'ouverture, sans JavaScript). */
+.workshop details:not([open]) .ws-faq-answer {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-motion,
+  .ws-lift,
+  .ws-price-pulse,
+  .ws-stat-tile,
+  .ws-flow-step,
+  .ws-list-stagger > li,
+  .ws-inclusion-row,
+  .ws-table-row {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+  .btn-motion::after,
+  .ws-panel-scan::after,
+  .ws-flow-line::after,
+  .ws-card-sheen::after {
+    display: none;
+  }
+}
