@@ -35,7 +35,7 @@ export function WorkshopHeader() {
           ))}
         </nav>
 
-        <ButtonLink href="#formules" size="sm" variant="navy" className="shrink-0 rounded-full">
+        <ButtonLink href="#inscription" size="sm" variant="navy" className="shrink-0 rounded-full">
           Réserver ma place
         </ButtonLink>
       </div>

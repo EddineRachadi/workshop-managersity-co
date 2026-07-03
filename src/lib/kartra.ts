@@ -1,28 +1,28 @@
 /**
- * Intégration Kartra — envoi des inscriptions vers le formulaire Kartra.
+ * Intégration Kartra — envoi des inscriptions au Workshop IA vers Kartra.
  *
  * On garde le formulaire personnalisé de la landing : à la soumission, on POST
  * les données vers l'endpoint Kartra dans une IFRAME CACHÉE. L'utilisateur reste
  * donc sur la page (message de succès affiché), et Kartra reçoit le lead +
  * déclenche ses automatisations (séquences, tags, emails).
  *
- * Pour changer de formulaire Kartra plus tard : remplacer KARTRA_ACTION et, si
- * besoin, la correspondance des champs ci-dessous (visible dans le code
- * d'intégration Kartra : attributs `name="..."` de chaque <input>).
+ * À COMPLÉTER : KARTRA_ACTION et KARTRA_FIELD_MAP ci-dessous sont des
+ * placeholders. Remplacez-les par le vrai lien/code d'intégration une fois le
+ * formulaire créé dans Kartra pour le Workshop IA (voir attributs `name="..."`
+ * de chaque <input> dans le code fourni par Kartra).
  */
 
 export const KARTRA_ACTION =
-  "https://app.kartra.com/process/add_lead/NhmL1RzT7QYf";
+  "https://app.kartra.com/process/add_lead/REMPLACER_PAR_LE_LIEN_KARTRA";
 
 /** Correspondance : champ de notre formulaire → name attendu par Kartra. */
 export const KARTRA_FIELD_MAP: Record<string, string> = {
   prenom: "first_name",
   nom: "last_name",
   email: "email",
-  fonction: "custom_913", // « Poste occupé » dans Kartra
-  pays: "custom_2108",
-  whatsapp: "custom_801", // « Numéro de téléphone » dans Kartra
-  // entreprise: "custom_158", // dispo dans Kartra si on ajoute le champ au formulaire
+  whatsapp: "custom_801", // À vérifier avec le nouveau formulaire Kartra
+  pays: "custom_2108", // À vérifier avec le nouveau formulaire Kartra
+  formule: "custom_913", // À vérifier avec le nouveau formulaire Kartra
 };
 
 /** Champ « pot de miel » anti-bot de Kartra : doit rester vide. */
@@ -32,9 +32,9 @@ export interface InscriptionValues {
   prenom: string;
   nom: string;
   email: string;
-  fonction: string;
   whatsapp: string;
   pays: string;
+  formule: string;
 }
 
 /**

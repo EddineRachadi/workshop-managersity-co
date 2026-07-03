@@ -52,7 +52,7 @@ export function WorkshopHero() {
             className="ws-rise mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row"
             style={{ ["--ws-delay" as string]: "300ms" }}
           >
-            <ButtonLink href="#formules" size="lg" className="w-full rounded-full sm:w-auto">
+            <ButtonLink href="#inscription" size="lg" className="w-full rounded-full sm:w-auto">
               Réserver ma place
             </ButtonLink>
             <ButtonLink

@@ -11,35 +11,34 @@ const SITE_URL = "https://managersity.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Le Lab IA MANAGERSITY — L'IA pratique, 3 fois par semaine",
+  title: "Workshop IA MANAGERSITY — Recruter ses employés IA dans son métier",
   description:
-    "Newsletter gratuite pour managers, dirigeants, RH, commerciaux et professionnels. Recevez chaque lundi, mercredi et vendredi des cas d'usage, prompts, outils et méthodes pour utiliser l'IA dans votre métier.",
+    "Workshop IA en ligne, en live. Identifier les tâches à déléguer à l'IA, créer des assistants, agents et capacités IA spécialisés, puis structurer un système de travail augmenté. Pour managers, dirigeants et professionnels.",
   keywords: [
-    "IA",
-    "intelligence artificielle",
-    "newsletter IA",
+    "workshop IA",
+    "formation IA",
+    "assistants IA",
+    "agents IA",
     "MANAGERSITY",
+    "intelligence artificielle",
     "management",
     "productivité",
-    "prompts",
-    "ChatGPT",
-    "formation IA",
   ],
   authors: [{ name: "MANAGERSITY" }],
   openGraph: {
-    title: "Le Lab IA MANAGERSITY — L'IA pratique, 3 fois par semaine",
+    title: "Workshop IA MANAGERSITY — Recruter ses employés IA dans son métier",
     description:
-      "Cas d'usage, prompts, outils et méthodes pour utiliser l'IA dans votre métier. Gratuit, chaque lundi, mercredi et vendredi.",
+      "Identifier les tâches à déléguer à l'IA, créer des assistants, agents et capacités IA spécialisés, puis structurer un système de travail augmenté.",
     url: SITE_URL,
-    siteName: "Le Lab IA MANAGERSITY",
+    siteName: "MANAGERSITY",
     locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Le Lab IA MANAGERSITY",
+    title: "Workshop IA MANAGERSITY",
     description:
-      "L'IA pratique pour mieux travailler, 3 fois par semaine. Newsletter gratuite.",
+      "Workshop IA en ligne, en live, pour managers, dirigeants et professionnels.",
   },
 };
 

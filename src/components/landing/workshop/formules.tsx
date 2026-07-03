@@ -68,7 +68,6 @@ function Dash() {
 export function WorkshopFormules() {
   return (
     <>
-      <span id="inscription" className="block scroll-mt-20" aria-hidden="true" />
       <Section id="formules" className="bg-paper">
         <Reveal>
           <SectionHead

@@ -14,12 +14,6 @@ export function Footer() {
           </div>
           <div className="flex flex-col sm:items-end gap-2">
             <a
-              href="/workshop-ia"
-              className="text-sm font-semibold text-gold hover:text-white transition-colors"
-            >
-              Workshop IA — Recruter ses employés IA →
-            </a>
-            <a
               href="https://managersity.co"
               target="_blank"
               rel="noopener noreferrer"
@@ -31,8 +25,8 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
-          <p>© {year} MANAGERSITY — Le Lab IA. Tous droits réservés.</p>
-          <p>L&apos;IA pratique pour mieux travailler, 3 fois par semaine.</p>
+          <p>© {year} MANAGERSITY — Workshop IA. Tous droits réservés.</p>
+          <p>Recruter ses employés IA dans son métier.</p>
         </div>
       </div>
     </footer>
