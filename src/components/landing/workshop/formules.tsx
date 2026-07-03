@@ -95,6 +95,8 @@ export function WorkshopFormules() {
 
               <ButtonLink
                 href={WORKSHOP.liens.standard}
+                target="_blank"
+                rel="noopener noreferrer"
                 variant="navy"
                 className="mt-7 w-full"
               >
@@ -147,6 +149,8 @@ export function WorkshopFormules() {
 
                 <ButtonLink
                   href={WORKSHOP.liens.premium}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variant="primary"
                   className="mt-7 w-full"
                 >
