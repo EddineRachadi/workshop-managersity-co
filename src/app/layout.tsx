@@ -50,7 +50,7 @@ export default function RootLayout({
       <head>
         {/* Sans JavaScript, on n'applique aucune animation : tout reste visible. */}
         <noscript>
-          <style>{`.reveal{opacity:1 !important}`}</style>
+          <style>{`.reveal,.reveal-fade,.reveal-zoom,.reveal-left,.reveal-right{opacity:1 !important}`}</style>
         </noscript>
       </head>
       <body className="font-sans">{children}</body>

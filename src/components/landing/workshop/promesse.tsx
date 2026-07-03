@@ -32,7 +32,7 @@ const CAPACITES = [
 export function WorkshopPromesse() {
   return (
     <Section className="bg-paper">
-      <Reveal>
+      <Reveal variant="fade">
         <SectionHead
           index="03"
           eyebrow="Ce que vous saurez faire"

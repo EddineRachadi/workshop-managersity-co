@@ -7,7 +7,7 @@ export function WorkshopParadigme() {
       <div className="pointer-events-none absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-green/12 blur-3xl" />
 
       <div className="relative max-w-[1120px] mx-auto px-4 sm:px-6">
-        <Reveal>
+        <Reveal variant="zoom">
           <p className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-gold">
             <span>02</span>
             <span className="h-px w-7 bg-white/25" aria-hidden="true" />

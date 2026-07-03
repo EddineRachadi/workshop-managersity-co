@@ -48,7 +48,7 @@ const FICHES: Fiche[] = [
 export function WorkshopEmployesIa() {
   return (
     <Section className="bg-white">
-      <Reveal>
+      <Reveal variant="zoom">
         <SectionHead
           index="04"
           eyebrow="La signature du workshop"

@@ -28,7 +28,7 @@ function Tick() {
 export function WorkshopInclus() {
   return (
     <Section className="bg-white">
-      <Reveal>
+      <Reveal variant="fade">
         <SectionHead
           index="06"
           eyebrow="Ce que vous allez recevoir"

@@ -41,7 +41,7 @@ const JOURS: Jour[] = [
 export function WorkshopProgramme() {
   return (
     <Section id="programme" className="bg-paper">
-      <Reveal>
+      <Reveal variant="fade">
         <SectionHead
           index="05"
           eyebrow="Programme"
@@ -52,7 +52,7 @@ export function WorkshopProgramme() {
 
       <div className="mt-16 grid lg:grid-cols-2 gap-6">
         {JOURS.map((jour, i) => (
-          <Reveal key={jour.label} delay={i * 100}>
+          <Reveal key={jour.label} delay={i * 100} variant={i === 0 ? "left" : "right"}>
             <div className="ws-lift ws-card-sheen h-full rounded-2xl border border-paper-line bg-white p-7 sm:p-9 hover:border-green/35 hover:shadow-[0_22px_55px_-32px_rgba(10,35,66,0.35)]">
               <div className="flex items-baseline justify-between gap-4 border-b border-paper-line pb-5">
                 <span className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-gold">

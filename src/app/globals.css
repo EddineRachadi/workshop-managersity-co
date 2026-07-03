@@ -64,7 +64,7 @@ html {
   color: transparent;
 }
 
-/* Apparition douce au scroll */
+/* Apparition douce au scroll — variantes (up, fade, zoom, left, right) */
 @keyframes reveal-up {
   from {
     opacity: 0;
@@ -75,13 +75,75 @@ html {
     transform: translateY(0);
   }
 }
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes reveal-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 .reveal {
   opacity: 0;
 }
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.94);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-36px);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(36px);
+}
 
 .reveal.is-visible {
   animation: reveal-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.reveal-fade.is-visible {
+  animation: reveal-fade 0.7s ease forwards;
+}
+.reveal-zoom.is-visible {
+  animation: reveal-zoom 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.reveal-left.is-visible {
+  animation: reveal-left 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.reveal-right.is-visible {
+  animation: reveal-right 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -89,8 +151,12 @@ html {
     scroll-behavior: auto;
   }
   .reveal,
-  .reveal.is-visible {
+  .reveal-fade,
+  .reveal-zoom,
+  .reveal-left,
+  .reveal-right {
     opacity: 1;
+    transform: none;
     animation: none;
   }
 }
@@ -476,15 +542,28 @@ html {
 }
 
 /* ——————————————————————————————————————————————
-   FIABILITÉ MOBILE : sur la page workshop, les blocs .reveal sont animés
-   par CSS pur au chargement (fill-mode both) et NE dépendent donc plus du
-   JavaScript. Même si le JS est lent, absent ou bloqué (vieux Safari,
-   mode dev sur mobile), le contenu finit toujours par s'afficher.
+   Apparition au défilement (page workshop) : chaque bloc .reveal-* s'anime
+   quand il entre dans le viewport (piloté par IntersectionObserver, voir
+   components/ui/reveal.tsx). Fiabilité mobile : si le JS est lent, absent ou
+   bloqué, un filet de sécurité (timeout + fallback sans IntersectionObserver
+   dans Reveal, et la règle <noscript> dans layout.tsx) garantit que le
+   contenu finit toujours par s'afficher.
    —————————————————————————————————————————————— */
 @media (prefers-reduced-motion: no-preference) {
-  .workshop .reveal,
   .workshop .reveal.is-visible {
     animation: reveal-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .workshop .reveal-fade.is-visible {
+    animation: reveal-fade 0.7s ease both;
+  }
+  .workshop .reveal-zoom.is-visible {
+    animation: reveal-zoom 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .workshop .reveal-left.is-visible {
+    animation: reveal-left 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .workshop .reveal-right.is-visible {
+    animation: reveal-right 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   /* Ouverture douce des réponses FAQ (accordéon natif <details>) */
@@ -503,8 +582,13 @@ html {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .workshop .reveal {
+  .workshop .reveal,
+  .workshop .reveal-fade,
+  .workshop .reveal-zoom,
+  .workshop .reveal-left,
+  .workshop .reveal-right {
     opacity: 1;
+    transform: none;
     animation: none;
   }
 }

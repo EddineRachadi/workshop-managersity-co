@@ -4,8 +4,8 @@ import { Reveal } from "@/components/ui/reveal";
 export function WorkshopCredibilite() {
   return (
     <Section className="bg-white">
-      <Reveal>
-        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-16">
+      <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-16">
+        <Reveal variant="left">
           <div>
             <p className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-green">
               <span className="text-gold">11</span>
@@ -19,7 +19,9 @@ export function WorkshopCredibilite() {
               Lab IA · Formations · Classes digitales
             </p>
           </div>
+        </Reveal>
 
+        <Reveal variant="right" delay={80}>
           <div className="space-y-5 text-lg leading-relaxed text-muted lg:pt-1">
             <p>
               MANAGERSITY accompagne les managers, dirigeants et professionnels
@@ -42,8 +44,8 @@ export function WorkshopCredibilite() {
               authentiques). Ne rien inventer.
             */}
           </div>
-        </div>
-      </Reveal>
+        </Reveal>
+      </div>
     </Section>
   );
 }

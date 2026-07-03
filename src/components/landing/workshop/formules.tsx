@@ -69,7 +69,7 @@ export function WorkshopFormules() {
   return (
     <>
       <Section id="formules" className="bg-paper">
-        <Reveal>
+        <Reveal variant="fade">
           <SectionHead
             index="07"
             eyebrow="Formules"
@@ -80,7 +80,7 @@ export function WorkshopFormules() {
 
         <div className="mt-16 grid lg:grid-cols-2 gap-6 lg:gap-7 items-start">
           {/* Standard */}
-          <Reveal>
+          <Reveal variant="left">
             <div className="ws-lift ws-card-sheen flex h-full flex-col rounded-2xl border border-paper-line bg-white p-7 sm:p-9 hover:border-navy/30 hover:shadow-[0_22px_55px_-32px_rgba(10,35,66,0.4)]">
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
                 Formule · Standard
@@ -127,7 +127,7 @@ export function WorkshopFormules() {
           </Reveal>
 
           {/* Premium */}
-          <Reveal delay={100}>
+          <Reveal delay={100} variant="right">
             <div className="ws-price-pulse relative flex h-full flex-col overflow-hidden rounded-2xl border-2 border-navy bg-white shadow-[0_24px_60px_-32px_rgba(10,35,66,0.5)]">
               <div className="flex items-center justify-between bg-navy px-7 py-3 text-white sm:px-9">
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/70">

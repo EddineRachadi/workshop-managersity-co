@@ -1,4 +1,5 @@
 import { Section } from "@/components/ui/section";
+import { Reveal } from "@/components/ui/reveal";
 import { SectionHead } from "./section-head";
 
 const FAQS = [
@@ -43,36 +44,40 @@ const FAQS = [
 export function WorkshopFaq() {
   return (
     <Section id="faq" className="bg-paper">
-      <SectionHead index="12" eyebrow="FAQ" title="Questions fréquentes." />
+      <Reveal variant="fade">
+        <SectionHead index="12" eyebrow="FAQ" title="Questions fréquentes." />
+      </Reveal>
 
       {/* Accordéon natif <details> : fonctionne sans JavaScript (fiable sur tous
           les navigateurs, y compris Safari mobile). */}
-      <div className="mt-12 max-w-3xl divide-y divide-paper-line border-y border-paper-line">
-        {FAQS.map((item, i) => (
-          <details
-            key={item.q}
-            open={i === 0}
-            className="group"
-          >
-            <summary className="flex cursor-pointer list-none items-center gap-5 py-5 [&::-webkit-details-marker]:hidden">
-              <span className="font-mono text-[11px] font-medium text-gold tabular-nums">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="flex-1 font-display text-lg font-medium text-navy transition-colors duration-200 group-hover:text-green group-open:text-green">
-                {item.q}
-              </span>
-              <span className="shrink-0 text-green transition-transform duration-200 group-open:rotate-45">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
-              </span>
-            </summary>
-            <p className="ws-faq-answer pb-5 pl-9 pr-9 text-muted leading-relaxed">
-              {item.a}
-            </p>
-          </details>
-        ))}
-      </div>
+      <Reveal delay={80}>
+        <div className="mt-12 w-full divide-y divide-paper-line border-y border-paper-line">
+          {FAQS.map((item, i) => (
+            <details
+              key={item.q}
+              open={i === 0}
+              className="group"
+            >
+              <summary className="flex cursor-pointer list-none items-center gap-5 py-5 [&::-webkit-details-marker]:hidden">
+                <span className="font-mono text-[11px] font-medium text-gold tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="flex-1 font-display text-lg font-medium text-navy transition-colors duration-200 group-hover:text-green group-open:text-green">
+                  {item.q}
+                </span>
+                <span className="shrink-0 text-green transition-transform duration-200 group-open:rotate-45">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                </span>
+              </summary>
+              <p className="ws-faq-answer pb-5 pl-9 pr-9 text-muted leading-relaxed">
+                {item.a}
+              </p>
+            </details>
+          ))}
+        </div>
+      </Reveal>
     </Section>
   );
 }

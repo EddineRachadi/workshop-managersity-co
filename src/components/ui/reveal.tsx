@@ -8,10 +8,12 @@ interface RevealProps {
   className?: string;
   /** Délai d'apparition en ms (effet cascade). */
   delay?: number;
+  /** Style d'apparition. "up" (défaut) : fondu + léger glissement vers le haut. */
+  variant?: "up" | "fade" | "zoom" | "left" | "right";
 }
 
 /** Anime l'apparition d'un bloc lorsqu'il entre dans le viewport. */
-export function Reveal({ children, className, delay = 0 }: RevealProps) {
+export function Reveal({ children, className, delay = 0, variant = "up" }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -42,7 +44,12 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
   return (
     <div
       ref={ref}
-      className={cn("reveal", visible && "is-visible", className)}
+      className={cn(
+        "reveal",
+        variant !== "up" && `reveal-${variant}`,
+        visible && "is-visible",
+        className
+      )}
       style={delay ? { animationDelay: `${delay}ms` } : undefined}
     >
       {children}

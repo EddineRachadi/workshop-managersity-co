@@ -46,7 +46,7 @@ function Mark({ on }: { on: boolean }) {
 export function WorkshopComparaison() {
   return (
     <Section className="bg-paper">
-      <Reveal>
+      <Reveal variant="fade">
         <SectionHead
           index="08"
           eyebrow="Comparatif"
@@ -54,8 +54,8 @@ export function WorkshopComparaison() {
         />
       </Reveal>
 
-      <Reveal delay={80}>
-        <div className="mt-14 max-w-3xl overflow-hidden rounded-2xl border border-paper-line bg-white">
+      <Reveal delay={80} variant="zoom">
+        <div className="mt-14 w-full overflow-hidden rounded-2xl border border-paper-line bg-white">
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="border-b border-paper-line">

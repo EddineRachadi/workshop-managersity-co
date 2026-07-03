@@ -19,7 +19,7 @@ export function WorkshopPourQui() {
   return (
     <section id="pour-qui" className="bg-white py-20 sm:py-28 scroll-mt-20">
       <div className="max-w-[1120px] mx-auto px-4 sm:px-6">
-        <Reveal>
+        <Reveal variant="zoom">
           <SectionHead
             index="09"
             eyebrow="Pour qui ?"

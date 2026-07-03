@@ -19,7 +19,7 @@ const CE_QUI_MANQUE = [
 export function WorkshopProbleme() {
   return (
     <Section className="bg-paper">
-      <Reveal>
+      <Reveal variant="fade">
         <SectionHead
           index="01"
           eyebrow="Le constat"
@@ -29,7 +29,7 @@ export function WorkshopProbleme() {
       </Reveal>
 
       <div className="mt-16 grid md:grid-cols-2 gap-px overflow-hidden rounded-2xl border border-paper-line bg-paper-line">
-        <Reveal>
+        <Reveal variant="left">
           <div className="h-full bg-white p-7 sm:p-8">
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
               Aujourd&apos;hui · usage ponctuel
@@ -45,7 +45,7 @@ export function WorkshopProbleme() {
           </div>
         </Reveal>
 
-        <Reveal delay={90}>
+        <Reveal delay={90} variant="right">
           <div className="h-full bg-white p-7 sm:p-8">
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-green">
               Ce qui manque · méthode
