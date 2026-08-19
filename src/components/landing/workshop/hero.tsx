@@ -3,16 +3,16 @@ import { WORKSHOP } from "@/lib/workshop";
 
 const REPERES = [
   { label: "Dates", value: "17–18 septembre 2026" },
-  { label: "Format", value: "En ligne · live" },
+  { label: "Format", value: "En ligne · en direct" },
   { label: "Public", value: "Dirigeants · CODIR · Managers" },
   { label: "Clôture", value: "10 septembre 2026" },
 ];
 
 const FLOW = [
-  { label: "Voir", detail: "Données déjà présentes et liens avec la décision" },
-  { label: "Comprendre", detail: "Indicateurs, trends, causes et écarts" },
-  { label: "Anticiper", detail: "Analytics et IA pour détecter les risques" },
-  { label: "Automatiser", detail: "Analyses, alertes et reportings récurrents" },
+  { label: "Voir", detail: "Repérer les données déjà présentes dans votre organisation et les relier aux décisions que vous devez prendre." },
+  { label: "Comprendre", detail: "Choisir les bons indicateurs, lire les tendances, désagréger les moyennes et rechercher les causes réelles." },
+  { label: "Anticiper", detail: "Utiliser les analytics et l’IA pour détecter plus tôt les écarts, les risques et les opportunités." },
+  { label: "Automatiser", detail: "Accélérer les analyses récurrentes, les reportings, les alertes et certaines actions opérationnelles." },
 ];
 
 export function WorkshopHero() {
@@ -27,28 +27,20 @@ export function WorkshopHero() {
 
       <div className="relative z-10 mx-auto max-w-[1120px] px-4 pb-16 pt-12 sm:px-6 sm:pb-24 sm:pt-16">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="ws-rise mx-auto inline-flex rounded-full border border-paper-line bg-white/72 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-green shadow-sm">
-            DATA ANALYTICS &amp; AI
-          </p>
-
           <h1
             className="ws-rise mt-7 font-display text-[3rem] font-semibold leading-[0.94] tracking-[-0.02em] sm:text-7xl lg:text-[5.7rem]"
             style={{ ["--ws-delay" as string]: "90ms" }}
           >
-            Deux jours d’immersion pour transformer vos données en décisions
-            plus rapides, en performances mieux pilotées et en opérations
-            intelligemment automatisées.
+            DATA ANALYTICS &amp; AI
           </h1>
 
           <p
             className="ws-rise mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl"
             style={{ ["--ws-delay" as string]: "190ms" }}
           >
-            Vous avez déjà des données : ventes, finances, opérations, clients,
-            équipes, projets. Pendant deux sessions pratiques, vous apprendrez à
-            les structurer, à les lire avec rigueur, à en tirer des décisions
-            actionnables et à utiliser l&apos;IA pour accélérer vos analyses, vos
-            alertes et vos reportings — sans avoir besoin d&apos;être data scientist.
+            Deux jours d’immersion pour transformer vos données en décisions plus
+            rapides, en performances mieux pilotées et en opérations
+            intelligemment automatisées.
           </p>
 
           <div
@@ -85,7 +77,7 @@ export function WorkshopHero() {
             <div className="flex flex-col gap-3 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold">
-                  De la donnée à l&apos;action
+                  De la donnée disponible à l&apos;action automatisée
                 </p>
                 <p className="mt-2 text-sm text-white/58">
                   Une méthode pour passer d&apos;une information dispersée à des
