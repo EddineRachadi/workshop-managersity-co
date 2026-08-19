@@ -4,40 +4,40 @@ import { SectionHead } from "./section-head";
 
 const FAQS = [
   {
-    q: "Est-ce que ce workshop est technique ?",
-    a: "Non. Il est conçu pour des professionnels, managers et dirigeants. Il ne nécessite pas de savoir coder.",
+    q: "Le workshop est-il technique ?",
+    a: "Le contenu est conçu pour des dirigeants, des membres de CODIR et des managers. Les exercices ne demandent aucune compétence en programmation.",
   },
   {
-    q: "Est-ce utile si j'utilise déjà ChatGPT, Claude ou Copilot ?",
-    a: "Oui. Le sujet n'est pas seulement d'utiliser un outil comme ChatGPT, Claude ou Copilot, mais de structurer des assistants, des agents simples et des capacités IA autour de votre métier.",
+    q: "Dois-je être data scientist ou maîtriser Power BI ?",
+    a: "Aucune expertise de data scientist n'est requise. Des exemples de tableaux de bord et d'analytics seront utilisés, avec une lecture orientée décision et métier.",
+  },
+  {
+    q: "Mon organisation a peu de données structurées. Le workshop reste-t-il utile ?",
+    a: "Oui. La première étape consiste justement à repérer les données déjà produites par vos activités, à clarifier les questions prioritaires et à identifier les sources à connecter progressivement.",
+  },
+  {
+    q: "Puis-je travailler sur mes propres données ?",
+    a: "Vous pourrez transposer les exercices à votre contexte. Aucun partage de donnée confidentielle n'est nécessaire : des datasets d'entraînement sont fournis et toute donnée personnelle utilisée pendant les exercices doit être anonymisée.",
+  },
+  {
+    q: "Quels métiers sont concernés ?",
+    a: "Le workshop s'applique aux fonctions qui pilotent des ventes, des marges, du cash, des stocks, des clients, des projets, des opérations, des équipes, des risques ou de la qualité.",
   },
   {
     q: "Quelle est la différence entre Standard et Premium ?",
-    a: "Les deux formules donnent accès au live et au replay. Premium ajoute le pack de ressources, les templates et le plan d'action 30 jours pour appliquer la méthode après le workshop.",
+    a: "Standard couvre les deux journées live, les supports, les datasets, les modèles, le replay pendant 30 jours et le certificat. Premium ajoute le cours vidéo complet sur MANAGERSITY, les kits par fonction, deux cliniques d'implémentation, l'évaluation et le plan d'action à 90 jours.",
   },
   {
     q: "Le replay est-il inclus ?",
-    a: "Oui, le replay est inclus dans les deux formules (Standard et Premium).",
+    a: "Oui. Le replay est accessible pendant 30 jours dans les deux formules.",
   },
   {
-    q: "Est-ce adapté à mon métier ?",
-    a: "Oui, si votre travail implique des analyses, documents, décisions, réunions, contenus, suivis, recherches, synthèses, reportings ou livrables professionnels.",
+    q: "Y aura-t-il un certificat ?",
+    a: "Oui, un certificat de participation est prévu selon les conditions définies par MANAGERSITY.",
   },
   {
-    q: "Y aura-t-il une attestation ?",
-    a: "Oui, selon les conditions de participation définies par MANAGERSITY.",
-  },
-  {
-    q: "Puis-je inscrire un collaborateur ?",
-    a: "Oui. Les inscriptions sont possibles à titre individuel ou pour une équipe. Contactez-nous pour une inscription groupée.",
-  },
-  {
-    q: "Que se passe-t-il si je ne peux pas assister en live ?",
-    a: "Le replay est inclus dans les deux formules : vous pourrez revoir les sessions à votre rythme, même si vous ne suivez pas tout en direct.",
-  },
-  {
-    q: "Quels moyens de paiement sont disponibles ?",
-    a: "Les moyens de paiement disponibles (par exemple Mobile Money, Wave, carte bancaire ou virement) s'affichent au moment de la réservation.",
+    q: "Puis-je inscrire plusieurs collaborateurs ?",
+    a: "Oui. Les inscriptions individuelles et groupées sont possibles. Pour un comité de direction ou une équipe, contactez MANAGERSITY au +221 78 190 74 84 afin d'obtenir une proposition et une facture pro forma.",
   },
 ];
 
@@ -48,8 +48,6 @@ export function WorkshopFaq() {
         <SectionHead index="12" eyebrow="FAQ" title="Questions fréquentes." />
       </Reveal>
 
-      {/* Accordéon natif <details> : fonctionne sans JavaScript (fiable sur tous
-          les navigateurs, y compris Safari mobile). */}
       <Reveal delay={80}>
         <div className="mt-12 w-full divide-y divide-paper-line border-y border-paper-line">
           {FAQS.map((item, i) => (

@@ -21,12 +21,18 @@ export function Footer() {
             >
               managersity.co →
             </a>
+            <a
+              href="tel:+221781907484"
+              className="text-sm font-medium text-white hover:text-gold transition-colors"
+            >
+              +221 78 190 74 84
+            </a>
           </div>
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
-          <p>© {year} MANAGERSITY — Workshop IA. Tous droits réservés.</p>
-          <p>Recruter ses employés IA dans son métier.</p>
+          <p>© {year} MANAGERSITY — Workshop DATA ANALYTICS &amp; AI. Tous droits réservés.</p>
+          <p>Transformer vos données en décisions.</p>
         </div>
       </div>
     </footer>

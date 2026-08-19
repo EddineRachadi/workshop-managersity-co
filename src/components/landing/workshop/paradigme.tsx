@@ -15,23 +15,23 @@ export function WorkshopParadigme() {
           </p>
 
           <blockquote className="mt-7 max-w-4xl font-display text-[1.9rem] sm:text-[2.7rem] font-medium leading-[1.12] tracking-[-0.01em]">
-            La question n&apos;est plus de savoir utiliser ChatGPT, Claude ou
-            encore Copilot.{" "}
+            La valeur apparaît lorsque la donnée modifie une décision, un arbitrage
+            ou une action.
             <span className="text-white/55">
-              C&apos;est de savoir organiser son travail avec l&apos;IA.
+              {" "}Le workshop vous apprend à construire ce passage de manière structurée.
             </span>
           </blockquote>
 
           <div className="mt-10 grid sm:grid-cols-2 gap-x-12 gap-y-5 max-w-3xl text-white/65 leading-relaxed">
             <p>
-              Un professionnel augmenté n&apos;est pas celui qui teste le plus
-              d&apos;outils. C&apos;est celui qui sait décrire son travail et
-              repérer ce qui mérite vraiment d&apos;être assisté.
+              Vos données existent déjà. Le vrai enjeu est de les relier à votre
+              pilotage, à vos priorités, à vos risques et à votre capacité à
+              agir avec précision.
             </p>
             <p>
-              Il conçoit les bons renforts IA, les fiabilise et les intègre dans
-              sa façon de produire. C&apos;est précisément ce que ces deux
-              sessions vous apprennent à construire.
+              À travers quatre mouvements — voir, comprendre, anticiper,
+              automatiser — vous apprenez à transformer l&apos;information en
+              décision et action, sans jargon inutile ni sur-technique.
             </p>
           </div>
         </Reveal>

@@ -3,16 +3,14 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHead } from "./section-head";
 
 const ELEMENTS = [
-  "6h de workshop en live",
-  "Exercices guidés",
-  "Démonstrations pratiques",
-  "Support de présentation",
-  "Méthode de cartographie des tâches IA",
-  "Introduction aux assistants IA métiers",
-  "Introduction aux agents IA simples",
-  "Introduction aux capacités IA",
-  "Attestation de participation selon conditions",
-  "Replay et ressources selon la formule",
+  "Les supports complets des deux journées.",
+  "Un cahier de travail pour transformer les exercices en décisions applicables.",
+  "Des datasets d'entraînement et des cas chiffrés.",
+  "Des modèles de tableaux de bord.",
+  "Une grille de lecture des indicateurs et des écarts.",
+  "Une matrice de priorisation valeur / effort.",
+  "Un canevas de plan Data & AI à 90 jours.",
+  "Replay et ressources selon la formule choisie.",
 ];
 
 function Tick() {
@@ -31,8 +29,8 @@ export function WorkshopInclus() {
       <Reveal variant="fade">
         <SectionHead
           index="06"
-          eyebrow="Ce que vous allez recevoir"
-          title="Le bordereau du workshop."
+          eyebrow="Ce que vous recevez"
+          title="Le kit de travail du workshop."
         />
       </Reveal>
 

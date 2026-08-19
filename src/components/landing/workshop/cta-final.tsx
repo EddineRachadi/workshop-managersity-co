@@ -10,16 +10,16 @@ export function WorkshopCtaFinal() {
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
         <Reveal variant="zoom">
           <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-gold">
-            Deux options
+            Deux jours pour passer de la donnée à l'action
           </p>
           <h2 className="mt-6 font-display text-[2.1rem] sm:text-[3rem] font-semibold leading-[1.08] tracking-[-0.01em]">
-            Continuer à tester l&apos;IA de temps en temps — ou commencer à
-            recruter de vrais renforts pour votre métier.
+            Apprenez à mieux lire vos indicateurs, détecter plus tôt les écarts,
+            construire des tableaux de bord utiles et utiliser l&apos;IA pour
+            accélérer vos analyses, reportings et opérations.
           </h2>
           <p className="mt-7 max-w-2xl text-lg text-white/70 leading-relaxed">
-            En deux sessions live, vous apprendrez à identifier les tâches à
-            déléguer, à créer vos assistants, agents et capacités IA, puis à les
-            organiser en un système de travail augmenté.
+            17–18 septembre 2026 · En ligne, en direct · Inscriptions jusqu&apos;au
+            10 septembre 2026.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-5">
@@ -27,7 +27,7 @@ export function WorkshopCtaFinal() {
               Réserver ma place
             </ButtonLink>
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/45">
-              30–31 juil. 2026 · 17h–20h GMT · en ligne, en live
+              Standard : 97 000 FCFA · Premium : 119 000 FCFA
             </p>
           </div>
         </Reveal>

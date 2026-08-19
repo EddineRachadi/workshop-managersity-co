@@ -9,21 +9,17 @@ interface Ligne {
 }
 
 const LIGNES: Ligne[] = [
-  { label: "Accès aux 2 sessions live", standard: true, premium: true },
-  { label: "Support de présentation", standard: true, premium: true },
-  { label: "Exercices guidés", standard: true, premium: true },
-  { label: "Démonstrations pratiques", standard: true, premium: true },
-  { label: "Méthode de cartographie des tâches IA", standard: true, premium: true },
-  { label: "Introduction assistants IA", standard: true, premium: true },
-  { label: "Introduction agents IA simples", standard: true, premium: true },
-  { label: "Introduction capacités IA", standard: true, premium: true },
-  { label: "Attestation selon conditions", standard: true, premium: true },
-  { label: "Replay", standard: true, premium: true },
-  { label: "Templates assistants IA", standard: false, premium: true },
-  { label: "Templates agents IA", standard: false, premium: true },
-  { label: "Templates skills / instructions systèmes", standard: false, premium: true },
-  { label: "Bibliothèque de prompts", standard: false, premium: true },
-  { label: "Plan d'action IA 30 jours", standard: false, premium: true },
+  { label: "2 journées de workshop en direct", standard: true, premium: true },
+  { label: "Supports, cahier de travail et datasets", standard: true, premium: true },
+  { label: "Modèles de tableaux de bord", standard: true, premium: true },
+  { label: "Replay du workshop", standard: true, premium: true },
+  { label: "Certificat de participation", standard: true, premium: true },
+  { label: "Cours vidéo complet sur MANAGERSITY", standard: false, premium: true },
+  { label: "Kits d'application par fonction", standard: false, premium: true },
+  { label: "2 cliniques d'implémentation", standard: false, premium: true },
+  { label: "Évaluation de maturité Data & AI", standard: false, premium: true },
+  { label: "Plan d'action sur 90 jours", standard: false, premium: true },
+  { label: "Tarif individuel", standard: true, premium: true },
 ];
 
 function Mark({ on }: { on: boolean }) {

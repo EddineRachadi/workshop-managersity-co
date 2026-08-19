@@ -5,40 +5,30 @@ import { SectionHead } from "./section-head";
 import { WORKSHOP } from "@/lib/workshop";
 
 const STANDARD_INCLUS = [
-  "Accès aux 2 sessions live",
-  "6h de workshop",
-  "Replay du workshop",
-  "Support de présentation",
-  "Exercices guidés",
-  "Démonstrations pratiques",
-  "Méthode de cartographie des tâches IA",
-  "Introduction assistants, agents simples & capacités IA",
-  "Attestation de participation selon conditions",
+  "Accès aux deux journées de workshop en direct",
+  "Supports, cahier de travail et datasets",
+  "Modèles de tableaux de bord",
+  "Replay accessible pendant 30 jours",
+  "Certificat de participation",
+  "Approche pratique sur les cas métier",
 ];
 
 const STANDARD_NON_INCLUS = [
-  "Pack complet de ressources",
-  "Templates avancés",
-  "Bibliothèque de prompts",
-  "Plan d'action IA 30 jours",
+  "Cours vidéo complet sur MANAGERSITY",
+  "Kits d'application par fonction",
+  "Cliniques d'implémentation",
+  "Évaluation de maturité Data & AI",
+  "Plan d'action sur 90 jours",
 ];
 
 const PREMIUM_INCLUS = [
   "Tout ce qui est inclus dans Standard",
-  "Replay du workshop",
-  "Support complet",
-  "Pack de ressources pratiques",
-  "Templates d'assistants IA",
-  "Templates d'agents IA simples",
-  "Modèles d'instructions systèmes",
-  "Templates de skills IA",
-  "Canevas de workflows",
-  "Bibliothèque de prompts de départ",
-  "Fiche de cartographie des tâches IA",
-  "Modèle de fiche de poste assistant IA",
-  "Checklist de fiabilité IA",
-  "Canevas système de travail augmenté",
-  "Plan d'action IA 30 jours",
+  "Cours vidéo complet accessible avant le workshop",
+  "Kits d'application par fonction",
+  "Deux cliniques d'implémentation",
+  "Évaluation de maturité Data & AI",
+  "Plan d'action personnalisé sur 90 jours",
+  "Cadrage complet pour passer à l'action après le workshop",
 ];
 
 function Tick({ tone = "green" }: { tone?: "green" | "gold" }) {
@@ -74,12 +64,11 @@ export function WorkshopFormules() {
             index="07"
             eyebrow="Formules"
             title="Deux façons de participer."
-            intro="Suivre le live et appliquer pendant les sessions, ou aussi revoir et construire votre système après le workshop."
+            intro="Suivre le live, appliquer les méthodes et repartir avec les outils pour transformer vos données en décisions utiles."
           />
         </Reveal>
 
         <div className="mt-16 grid lg:grid-cols-2 gap-6 lg:gap-7 items-start">
-          {/* Standard */}
           <Reveal variant="left">
             <div className="ws-lift ws-card-sheen flex h-full flex-col rounded-2xl border border-paper-line bg-white p-7 sm:p-9 hover:border-navy/30 hover:shadow-[0_22px_55px_-32px_rgba(10,35,66,0.4)]">
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
@@ -89,8 +78,8 @@ export function WorkshopFormules() {
                 {WORKSHOP.prix.standard}
               </p>
               <p className="mt-4 text-muted leading-relaxed">
-                Participer au live, suivre la méthode et commencer à appliquer
-                les exercices pendant les deux sessions.
+                Participez aux deux journées, appliquez la méthode pendant les
+                exercices et repartez avec les supports nécessaires pour poursuivre le travail.
               </p>
 
               <ButtonLink
@@ -100,7 +89,7 @@ export function WorkshopFormules() {
                 variant="navy"
                 className="mt-7 w-full"
               >
-                Réserver ma place
+                Choisir la formule Standard
               </ButtonLink>
 
               <ul className="mt-8 space-y-3">
@@ -126,7 +115,6 @@ export function WorkshopFormules() {
             </div>
           </Reveal>
 
-          {/* Premium */}
           <Reveal delay={100} variant="right">
             <div className="ws-price-pulse relative flex h-full flex-col overflow-hidden rounded-2xl border-2 border-brand-green bg-white shadow-[0_24px_60px_-32px_rgba(10,35,66,0.5)]">
               <div className="flex items-center justify-between bg-brand-green px-7 py-3 text-white sm:px-9">
@@ -143,8 +131,8 @@ export function WorkshopFormules() {
                   {WORKSHOP.prix.premium}
                 </p>
                 <p className="mt-4 text-muted leading-relaxed">
-                  Revoir, appliquer et construire votre système de travail
-                  augmenté après le live, avec toutes les ressources pratiques.
+                  Préparez-vous avant le direct, approfondissez les outils et
+                  bénéficiez d'un cadre d'implémentation après le workshop.
                 </p>
 
                 <ButtonLink
@@ -154,7 +142,7 @@ export function WorkshopFormules() {
                   variant="primary"
                   className="mt-7 w-full"
                 >
-                  Réserver ma place
+                  Choisir la formule Premium
                 </ButtonLink>
 
                 <ul className="mt-8 grid sm:grid-cols-2 gap-x-6 gap-y-3">
@@ -170,7 +158,6 @@ export function WorkshopFormules() {
           </Reveal>
         </div>
 
-        {/* Inscription individuelle ou d'équipe + contact WhatsApp */}
         <Reveal delay={120}>
           <div className="ws-lift mt-7 flex flex-col gap-4 rounded-2xl border border-paper-line bg-white p-6 sm:flex-row sm:items-center sm:justify-between hover:border-brand-green/40 hover:shadow-[0_18px_42px_-30px_rgba(10,35,66,0.35)]">
             <div>
@@ -178,8 +165,7 @@ export function WorkshopFormules() {
                 Individuel ou équipe
               </p>
               <p className="mt-2 text-navy leading-relaxed">
-                Inscrivez un collaborateur ou une équipe. Contactez-nous pour
-                les inscriptions groupées.
+                Vous pouvez inscrire un collaborateur, plusieurs managers ou un comité de direction. Pour une inscription groupée ou une facture pro forma : +221 78 190 74 84.
               </p>
             </div>
             <a

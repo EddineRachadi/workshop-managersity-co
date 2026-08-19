@@ -2,17 +2,17 @@ import { ButtonLink } from "@/components/ui/button";
 import { WORKSHOP } from "@/lib/workshop";
 
 const REPERES = [
-  { label: "Dates", value: "30–31 juillet 2026" },
-  { label: "Horaire", value: "17h–20h GMT" },
+  { label: "Dates", value: "17–18 septembre 2026" },
   { label: "Format", value: "En ligne · live" },
-  { label: "Durée", value: "2 × 3h — 6h" },
+  { label: "Public", value: "Dirigeants · CODIR · Managers" },
+  { label: "Clôture", value: "10 septembre 2026" },
 ];
 
 const FLOW = [
-  { label: "Cartographier", detail: "Tâches, livrables, responsabilités" },
-  { label: "Déléguer", detail: "Ce qui mérite un renfort IA" },
-  { label: "Construire", detail: "Assistants, agents, capacités" },
-  { label: "Fiabiliser", detail: "Routines, sources, contrôle qualité" },
+  { label: "Voir", detail: "Données déjà présentes et liens avec la décision" },
+  { label: "Comprendre", detail: "Indicateurs, trends, causes et écarts" },
+  { label: "Anticiper", detail: "Analytics et IA pour détecter les risques" },
+  { label: "Automatiser", detail: "Analyses, alertes et reportings récurrents" },
 ];
 
 export function WorkshopHero() {
@@ -28,24 +28,25 @@ export function WorkshopHero() {
       <div className="relative z-10 mx-auto max-w-[1120px] px-4 pb-16 pt-12 sm:px-6 sm:pb-24 sm:pt-16">
         <div className="mx-auto max-w-4xl text-center">
           <p className="ws-rise mx-auto inline-flex rounded-full border border-paper-line bg-white/72 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-green shadow-sm">
-            Workshop IA MANAGERSITY
+            DATA ANALYTICS &amp; AI
           </p>
 
           <h1
             className="ws-rise mt-7 font-display text-[3rem] font-semibold leading-[0.94] tracking-[-0.02em] sm:text-7xl lg:text-[5.7rem]"
             style={{ ["--ws-delay" as string]: "90ms" }}
           >
-            Recruter ses employés IA dans son métier
+            Transformer vos données en décisions plus rapides
           </h1>
 
           <p
             className="ws-rise mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl"
             style={{ ["--ws-delay" as string]: "190ms" }}
           >
-            Identifier les tâches à déléguer à l&apos;intelligence artificielle,
-            créer des assistants, agents et capacités IA spécialisés, puis
-            structurer un système de travail augmenté pour produire mieux avec
-            plus de méthode.
+            Vous avez déjà des données : ventes, finances, opérations, clients,
+            équipes, projets. Pendant deux sessions pratiques, vous apprendrez à
+            les structurer, les lire avec rigueur, en tirer des décisions
+            actionnables et utiliser l&apos;IA pour accélérer vos analyses, vos
+            alertes et vos reportings — sans avoir besoin d&apos;être data scientist.
           </p>
 
           <div
@@ -69,9 +70,8 @@ export function WorkshopHero() {
             className="ws-rise mx-auto mt-5 max-w-2xl font-mono text-[10px] uppercase leading-relaxed tracking-[0.16em] text-muted"
             style={{ ["--ws-delay" as string]: "380ms" }}
           >
-            Formation en ligne, en live, conçue pour les professionnels,
-            managers et dirigeants qui veulent intégrer l&apos;IA dans leur
-            travail avec méthode.
+            Workshop pratique · Aucun prérequis technique · Replay inclus ·
+            Certificat de participation.
           </p>
         </div>
 
@@ -83,11 +83,11 @@ export function WorkshopHero() {
             <div className="flex flex-col gap-3 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold">
-                  Système de travail augmenté
+                  De la donnée à l&apos;action
                 </p>
                 <p className="mt-2 text-sm text-white/58">
-                  Une méthode pour passer d&apos;une demande isolée à des
-                  renforts IA organisés.
+                  Une méthode pour passer d&apos;une information dispersée à des
+                  décisions plus rapides et plus solides.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -131,11 +131,10 @@ export function WorkshopHero() {
 
             <div className="mt-4 flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/[0.06] p-4 sm:flex-row sm:items-center sm:justify-between">
               <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/48">
-                Standard {WORKSHOP.prix.standard} · Premium{" "}
-                {WORKSHOP.prix.premium}
+                Standard {WORKSHOP.prix.standard} · Premium {WORKSHOP.prix.premium}
               </p>
               <p className="text-sm text-white/62">
-                30-31 juillet 2026 · 17h-20h GMT · en ligne, en live
+                17–18 septembre 2026 · en ligne, en direct
               </p>
             </div>
           </div>

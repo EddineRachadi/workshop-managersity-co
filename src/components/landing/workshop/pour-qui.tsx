@@ -2,17 +2,15 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHead } from "./section-head";
 
 const PROFILES = [
-  "Managers",
   "Dirigeants",
-  "Chefs de service",
-  "Cadres à responsabilités",
-  "Assistants de direction",
-  "Responsables RH",
-  "Commerciaux",
-  "Marketeurs",
-  "Consultants",
-  "Entrepreneurs",
-  "Professionnels qui produisent beaucoup de livrables",
+  "Membres de comité de direction",
+  "Directeurs et responsables de département",
+  "Managers opérationnels et chefs de service",
+  "Responsables finance, contrôle de gestion et performance",
+  "Responsables commerciaux et marketing",
+  "Responsables opérations, supply chain, qualité et service client",
+  "Responsables RH et transformation",
+  "Consultants, entrepreneurs et professionnels",
 ];
 
 export function WorkshopPourQui() {
@@ -23,15 +21,14 @@ export function WorkshopPourQui() {
           <SectionHead
             index="09"
             eyebrow="Pour qui ?"
-            title="Pensé pour les profils qui décident et produisent."
-            intro="Aucun prérequis technique. Il suffit que votre travail implique des analyses, documents, décisions, contenus, suivis ou livrables."
+            title="Pensé pour les profils qui décident, pilotent et produisent."
+            intro="Aucun prérequis technique. Le workshop est adapté dès lors que votre fonction implique des indicateurs, des reportings, des analyses, des arbitrages ou des opérations à suivre."
             align="center"
             className="max-w-2xl"
           />
         </Reveal>
       </div>
 
-      {/* Bandeau défilant pleine largeur (pause au survol) */}
       <div
         className="ws-marquee-mask relative mt-14 overflow-hidden"
         style={{

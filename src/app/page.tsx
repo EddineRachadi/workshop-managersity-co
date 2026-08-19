@@ -38,26 +38,26 @@ const jetbrainsMono = JetBrains_Mono({
 const SITE_URL = "https://managersity.co";
 
 const DESCRIPTION =
-  "Workshop IA en ligne, en live (30-31 juillet 2026). Identifier les tâches à déléguer à l'IA, créer des assistants, agents et capacités IA spécialisés, puis structurer un système de travail augmenté. Pour managers, dirigeants et professionnels.";
+  "Participez au workshop en ligne DATA ANALYTICS & AI les 17 et 18 septembre 2026. Apprenez à transformer vos données en décisions, piloter la performance et automatiser vos analyses avec l'IA.";
 
 export const metadata: Metadata = {
-  title: "Workshop IA MANAGERSITY — Recruter ses employés IA dans son métier",
+  title: "Workshop Data Analytics & AI pour dirigeants, CODIR et managers | MANAGERSITY",
   description: DESCRIPTION,
   keywords: [
-    "workshop IA",
-    "formation IA",
-    "assistants IA",
-    "agents IA",
+    "Data Analytics",
+    "AI workshop",
+    "données et décision",
+    "performance management",
+    "tableaux de bord",
+    "analytics",
     "MANAGERSITY",
     "intelligence artificielle",
-    "management",
-    "productivité",
     "Afrique francophone",
   ],
   authors: [{ name: "MANAGERSITY" }],
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "Workshop IA MANAGERSITY — Recruter ses employés IA dans son métier",
+    title: "Workshop Data Analytics & AI pour dirigeants, CODIR et managers | MANAGERSITY",
     description: DESCRIPTION,
     url: SITE_URL,
     siteName: "MANAGERSITY",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Workshop IA MANAGERSITY — Recruter ses employés IA dans son métier",
+    title: "Workshop Data Analytics & AI pour dirigeants, CODIR et managers | MANAGERSITY",
     description: DESCRIPTION,
   },
 };
@@ -85,8 +85,8 @@ export default function Home() {
         <WorkshopEmployesIa />
         <WorkshopProgramme />
         <WorkshopCtaBand
-          title="Constituez votre première équipe d'employés IA."
-          subtitle="Deux sessions live pour passer d'un usage ponctuel de l'IA à une méthode de travail structurée."
+          title="Je veux passer de la donnée à l'action."
+          subtitle="Apprenez à mieux lire vos indicateurs, détecter les écarts, construire des tableaux de bord utiles et utiliser l'IA pour accélérer vos analyses, vos reportings et certaines opérations."
         />
         <WorkshopInclus />
         <WorkshopFormules />

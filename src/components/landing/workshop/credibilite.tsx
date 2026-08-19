@@ -13,10 +13,10 @@ export function WorkshopCredibilite() {
               <span>À propos</span>
             </p>
             <h2 className="mt-5 font-display text-[2rem] sm:text-[2.4rem] font-semibold leading-[1.08] text-navy">
-              MANAGERSITY
+              MANAGERSITY by H&amp;C
             </h2>
             <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-              Lab IA · Formations · Classes digitales
+              Data Analytics · IA · Performance
             </p>
           </div>
         </Reveal>
@@ -26,23 +26,18 @@ export function WorkshopCredibilite() {
             <p>
               MANAGERSITY accompagne les managers, dirigeants et professionnels
               dans le développement de compétences utiles pour mieux manager,
-              décider, structurer, apprendre et performer. À travers ses
-              formations, classes digitales, ressources et programmes,
-              MANAGERSITY aide les professionnels d&apos;Afrique francophone à
-              progresser de manière continue.
+              décider, structurer, apprendre et performer.
             </p>
             <p>
-              Ce workshop s&apos;inscrit dans la dynamique du{" "}
-              <span className="font-semibold text-navy">Lab IA MANAGERSITY</span>
-              , un rendez-vous gratuit pour apprendre à utiliser
-              l&apos;intelligence artificielle de manière concrète dans son
-              travail.
+              À travers ses formations, ses classes digitales, ses ressources et
+              ses programmes, MANAGERSITY aide les professionnels d&apos;Afrique
+              francophone à progresser de manière continue et à transformer les
+              apprentissages en pratiques de travail.
             </p>
-            {/*
-              TODO (optionnel) : zone de preuves/références à activer UNIQUEMENT
-              avec des éléments réels (chiffres vérifiés, logos, témoignages
-              authentiques). Ne rien inventer.
-            */}
+            <p>
+              Ce workshop s&apos;inscrit dans cette logique, avec une approche
+              orientée décision, performance et transformation opérationnelle.
+            </p>
           </div>
         </Reveal>
       </div>

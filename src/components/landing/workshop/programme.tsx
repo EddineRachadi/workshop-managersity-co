@@ -12,28 +12,28 @@ interface Jour {
 const JOURS: Jour[] = [
   {
     label: "Jour 1",
-    date: "Jeu. 30 juil. · 17h–20h GMT",
-    titre: "Identifier les tâches à déléguer et concevoir ses premiers assistants IA",
+    date: "Jeu. 17 sept. · en direct",
+    titre: "Transformer vos données en informations de pilotage",
     points: [
-      "Ce qu'un professionnel peut réellement déléguer à l'IA.",
-      "Cartographier ses tâches, livrables et responsabilités.",
-      "Distinguer tâches répétitives, complexes et à forte valeur.",
-      "Définir le rôle d'un assistant IA métier.",
-      "Créer une première fiche de poste d'assistant IA.",
-      "Démonstrations pratiques.",
+      "Repérer les données déjà disponibles dans les ventes, la finance, les opérations, la relation client et les RH.",
+      "Comprendre le circuit de la donnée : connecter, unifier, analyser, collaborer, apprendre.",
+      "Lire un chiffre avec rigueur : référence, tendance, cause, causalité et qualité de la donnée.",
+      "Distinguer indicateurs de résultat, indicateurs d'alerte et indicateurs réellement actionnables.",
+      "Construire un tableau de bord minimal de 8 à 12 indicateurs compris et utilisables par le manager.",
+      "Travailler sur des cas concrets : chiffre d'affaires, marge, cash, stocks, clients, qualité et performance d'équipe.",
     ],
   },
   {
     label: "Jour 2",
-    date: "Ven. 31 juil. · 17h–20h GMT",
-    titre: "Créer des agents, des capacités IA et structurer son système de travail augmenté",
+    date: "Ven. 18 sept. · en direct",
+    titre: "Analyser, anticiper et automatiser avec l'IA",
     points: [
-      "La logique des agents IA simples.",
-      "Concevoir des capacités : instructions, skills, plugins, workflows.",
-      "Organiser ses prompts, documents sources et routines.",
-      "Fiabiliser les résultats produits par l'IA.",
-      "Construire son premier système de travail augmenté.",
-      "Définir son plan d'action IA sur 30 jours.",
+      "Passer des analytics descriptifs aux analytics diagnostiques, prédictifs et prescriptifs.",
+      "Utiliser l'IA pour interroger, résumer et analyser des données sans avoir besoin de coder.",
+      "Détecter plus tôt les tendances, écarts, anomalies et risques qui méritent une décision.",
+      "Accélérer la préparation du reporting et produire des synthèses de décision plus utiles.",
+      "Concevoir des alertes et des automatisations simples, avec des règles de validation et de contrôle qualité.",
+      "Prioriser les cas d'usage par valeur et effort, puis installer un rituel de pilotage Data & AI.",
     ],
   },
 ];
@@ -45,8 +45,8 @@ export function WorkshopProgramme() {
         <SectionHead
           index="05"
           eyebrow="Programme"
-          title="Deux séances, une progression claire."
-          intro="Chaque journée combine méthode, démonstrations et exercices guidés, pour repartir avec des éléments directement applicables."
+          title="Deux journées, une progression claire."
+          intro="Chaque journée combine apports structurants, démonstrations, cas métier, exercices guidés et production de livrables réutilisables."
         />
       </Reveal>
 

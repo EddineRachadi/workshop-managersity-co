@@ -2,6 +2,7 @@ import { ButtonLink } from "@/components/ui/button";
 
 const NAV_LINKS = [
   { href: "#programme", label: "Programme" },
+  { href: "#resultats", label: "Résultats" },
   { href: "#formules", label: "Formules" },
   { href: "#pour-qui", label: "Pour qui" },
   { href: "#faq", label: "FAQ" },

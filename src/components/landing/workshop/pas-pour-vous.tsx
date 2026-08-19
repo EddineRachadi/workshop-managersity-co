@@ -3,11 +3,11 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHead } from "./section-head";
 
 const CAS = [
-  "Vous cherchez surtout une liste d'outils IA à tester.",
-  "Vous attendez une automatisation magique, sans réflexion sur votre métier.",
-  "Vous ne souhaitez pas faire les exercices.",
-  "Vous cherchez une formation technique de programmation.",
-  "Vous pensez que l'IA remplace le jugement professionnel.",
+  "Vous recherchez uniquement une liste d'outils à tester sans travailler sur vos décisions et vos processus.",
+  "Vous attendez une automatisation immédiate sans clarifier les données, les règles et les contrôles nécessaires.",
+  "Vous ne souhaitez pas participer aux exercices.",
+  "Vous recherchez une formation avancée de programmation, de machine learning ou d'ingénierie des données.",
+  "Vous souhaitez déléguer entièrement le jugement managérial à un système automatisé.",
 ];
 
 export function WorkshopPasPourVous() {
