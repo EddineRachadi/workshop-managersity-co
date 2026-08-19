@@ -27,6 +27,10 @@ export function WorkshopHero() {
 
       <div className="relative z-10 mx-auto max-w-[1120px] px-4 pb-16 pt-12 sm:px-6 sm:pb-24 sm:pt-16">
         <div className="mx-auto max-w-4xl text-center">
+          <p className="ws-rise mx-auto inline-flex rounded-full border border-paper-line bg-white/72 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-green shadow-sm">
+            The Digital Workshop
+          </p>
+
           <h1
             className="ws-rise mt-7 whitespace-nowrap font-display text-[2.25rem] font-semibold leading-[0.94] tracking-[-0.02em] sm:text-6xl lg:text-[5rem]"
             style={{ ["--ws-delay" as string]: "90ms" }}
