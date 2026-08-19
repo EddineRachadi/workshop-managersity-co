@@ -35,7 +35,9 @@ export function WorkshopHero() {
             className="ws-rise mt-7 font-display text-[3rem] font-semibold leading-[0.94] tracking-[-0.02em] sm:text-7xl lg:text-[5.7rem]"
             style={{ ["--ws-delay" as string]: "90ms" }}
           >
-            Transformer vos données en décisions plus rapides
+            Deux jours d’immersion pour transformer vos données en décisions
+            plus rapides, en performances mieux pilotées et en opérations
+            intelligemment automatisées.
           </h1>
 
           <p
@@ -44,8 +46,8 @@ export function WorkshopHero() {
           >
             Vous avez déjà des données : ventes, finances, opérations, clients,
             équipes, projets. Pendant deux sessions pratiques, vous apprendrez à
-            les structurer, les lire avec rigueur, en tirer des décisions
-            actionnables et utiliser l&apos;IA pour accélérer vos analyses, vos
+            les structurer, à les lire avec rigueur, à en tirer des décisions
+            actionnables et à utiliser l&apos;IA pour accélérer vos analyses, vos
             alertes et vos reportings — sans avoir besoin d&apos;être data scientist.
           </p>
 

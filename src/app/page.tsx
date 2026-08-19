@@ -7,7 +7,6 @@ import { WorkshopChiffres } from "@/components/landing/workshop/chiffres";
 import { WorkshopProbleme } from "@/components/landing/workshop/probleme";
 import { WorkshopParadigme } from "@/components/landing/workshop/paradigme";
 import { WorkshopPromesse } from "@/components/landing/workshop/promesse";
-import { WorkshopEmployesIa } from "@/components/landing/workshop/employes-ia";
 import { WorkshopProgramme } from "@/components/landing/workshop/programme";
 import { WorkshopInclus } from "@/components/landing/workshop/inclus";
 import { WorkshopFormules } from "@/components/landing/workshop/formules";
@@ -82,7 +81,6 @@ export default function Home() {
         <WorkshopProbleme />
         <WorkshopParadigme />
         <WorkshopPromesse />
-        <WorkshopEmployesIa />
         <WorkshopProgramme />
         <WorkshopCtaBand
           title="Je veux passer de la donnée à l'action."
