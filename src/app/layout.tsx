@@ -13,22 +13,29 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "DATA ANALYTICS & AI | MANAGERSITY",
   description:
-    "Deux jours d’immersion pour transformer vos données en décisions plus rapides, en performances mieux pilotées et en opérations intelligemment automatisées.",
+    "Workshop en ligne pour DG, DGA, CODIR et managers : Data Analytics, IA et pilotage de la performance. Deux jours pour transformer vos données en décisions et automatiser vos opérations.",
   keywords: [
     "Data Analytics",
-    "AI workshop",
-    "données et décision",
-    "performance management",
+    "workshop IA en ligne",
+    "formation IA pour dirigeants",
+    "formation Data Analytics",
+    "workshop management",
+    "DG DGA CODIR managers",
+    "pilotage de la performance",
+    "données et prise de décision",
+    "automatisation des opérations",
     "MANAGERSITY",
     "intelligence artificielle",
     "management",
-    "productivité",
+    "formation professionnelle Afrique",
+    "formation en ligne Afrique",
+    "executive education Africa",
   ],
   authors: [{ name: "MANAGERSITY" }],
   openGraph: {
     title: "DATA ANALYTICS & AI | MANAGERSITY",
     description:
-      "Deux jours d’immersion pour transformer vos données en décisions plus rapides, en performances mieux pilotées et en opérations intelligemment automatisées.",
+      "Workshop en ligne pour DG, DGA, CODIR et managers : Data Analytics, IA et pilotage de la performance.",
     url: SITE_URL,
     siteName: "MANAGERSITY",
     locale: "fr_FR",
@@ -38,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DATA ANALYTICS & AI | MANAGERSITY",
     description:
-      "Vous avez déjà des données : ventes, finances, opérations, clients, équipes, projets. Pendant deux sessions pratiques, vous apprendrez à les structurer, à les lire avec rigueur, à en tirer des décisions actionnables et à utiliser l’IA pour accélérer vos analyses, vos alertes et vos reportings — sans avoir besoin d’être data scientist.",
+      "Workshop en ligne Data Analytics, IA et management pour dirigeants et managers en Afrique et dans le monde.",
   },
 };
 

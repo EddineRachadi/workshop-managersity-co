@@ -14,7 +14,7 @@ export function WorkshopCtaBand({
   subtitle,
 }: WorkshopCtaBandProps) {
   return (
-    <section className="bg-paper py-14 sm:py-16">
+    <section className="bg-paper py-8 sm:py-10">
       <div className="max-w-[1120px] mx-auto px-4 sm:px-6">
         <Reveal variant="zoom">
           <div className="dossier-grid-light ws-grid-drift relative overflow-hidden rounded-[2rem] border border-navy/10 bg-navy p-8 text-white shadow-[0_30px_80px_-48px_rgba(21,19,15,0.6)] sm:p-10">

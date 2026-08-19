@@ -38,26 +38,31 @@ const jetbrainsMono = JetBrains_Mono({
 const SITE_URL = "https://managersity.co";
 
 const DESCRIPTION =
-  "Participez au workshop en ligne DATA ANALYTICS & AI les 17 et 18 septembre 2026. Apprenez à transformer vos données en décisions, piloter la performance et automatiser vos analyses avec l'IA.";
+  "Workshop en ligne pour DG, DGA, CODIR et managers : Data Analytics, IA et pilotage de la performance. Deux jours pour transformer vos données en décisions et automatiser vos opérations.";
 
 export const metadata: Metadata = {
-  title: "Workshop Data Analytics & AI pour dirigeants, CODIR et managers | MANAGERSITY",
+  title: "Workshop IA, Data & Management pour DG, DGA et CODIR | MANAGERSITY",
   description: DESCRIPTION,
   keywords: [
     "Data Analytics",
-    "AI workshop",
-    "données et décision",
+    "workshop IA en ligne",
+    "formation IA pour dirigeants",
+    "formation Data Analytics",
+    "workshop management",
+    "DG DGA CODIR managers",
     "performance management",
     "tableaux de bord",
     "analytics",
     "MANAGERSITY",
     "intelligence artificielle",
-    "Afrique francophone",
+    "formation professionnelle Afrique",
+    "formation en ligne Afrique",
+    "executive education Africa",
   ],
   authors: [{ name: "MANAGERSITY" }],
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "Workshop Data Analytics & AI pour dirigeants, CODIR et managers | MANAGERSITY",
+    title: "Workshop IA, Data & Management pour DG, DGA et CODIR | MANAGERSITY",
     description: DESCRIPTION,
     url: SITE_URL,
     siteName: "MANAGERSITY",

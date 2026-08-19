@@ -10,7 +10,7 @@ interface SectionProps {
 /** Wrapper de section : paddings verticaux + conteneur centré cohérents. */
 export function Section({ id, className, containerClassName, children }: SectionProps) {
   return (
-    <section id={id} className={cn("py-20 sm:py-28 scroll-mt-20", className)}>
+    <section id={id} className={cn("py-12 sm:py-16 scroll-mt-20", className)}>
       <div className={cn("max-w-[1120px] mx-auto px-4 sm:px-6", containerClassName)}>
         {children}
       </div>

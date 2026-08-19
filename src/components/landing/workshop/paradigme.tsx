@@ -9,7 +9,7 @@ const MOUVEMENTS = [
 
 export function WorkshopParadigme() {
   return (
-    <section className="relative overflow-hidden bg-navy py-20 text-white sm:py-28">
+    <section className="relative overflow-hidden bg-navy py-14 text-white sm:py-20">
       <div className="dossier-grid-light pointer-events-none absolute inset-0 opacity-60" />
       <div className="relative mx-auto max-w-[1120px] px-4 sm:px-6">
         <Reveal variant="zoom">
