@@ -5,7 +5,7 @@ import { SectionHead } from "./section-head";
 const ELEMENTS = [
   "Les supports complets des deux journées.",
   "Un cahier de travail pour transformer les exercices en décisions applicables.",
-  "Des datasets d'entraînement et des cas chiffrés.",
+  "Des datasets d’entraînement et des cas chiffrés.",
   "Des modèles de tableaux de bord.",
   "Une grille de lecture des indicateurs et des écarts.",
   "Une matrice de priorisation valeur / effort.",

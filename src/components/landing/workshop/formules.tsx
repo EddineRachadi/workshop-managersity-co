@@ -5,20 +5,20 @@ import { SectionHead } from "./section-head";
 import { WORKSHOP } from "@/lib/workshop";
 
 const STANDARD_INCLUS = [
-  "Accès aux deux journées de workshop en direct",
-  "Supports, cahier de travail et datasets",
-  "Modèles de tableaux de bord",
-  "Replay accessible pendant 30 jours",
-  "Certificat de participation",
+  "Accès aux deux journées de workshop en direct.",
+  "Supports, cahier de travail et datasets.",
+  "Modèles de tableaux de bord.",
+  "Replay accessible pendant 30 jours.",
+  "Certificat de participation.",
 ];
 
 const PREMIUM_INCLUS = [
-  "Tous les avantages de la formule Standard",
-  "Cours vidéo complet accessible sur MANAGERSITY avant le workshop",
-  "Kits d'application par fonction",
-  "Deux cliniques d'implémentation",
-  "Évaluation de maturité Data & AI",
-  "Plan d'action personnalisé sur 90 jours",
+  "Tous les avantages de la formule Standard.",
+  "Cours vidéo complet accessible sur MANAGERSITY avant le workshop.",
+  "Kits d’application par fonction.",
+  "Deux cliniques d’implémentation.",
+  "Évaluation de maturité Data & AI.",
+  "Plan d’action personnalisé sur 90 jours.",
   "Cadrage complet pour passer à l'action après le workshop",
 ];
 
@@ -58,7 +58,7 @@ export function WorkshopFormules() {
               <p className="mt-5 font-display text-[2.6rem] font-semibold leading-none text-navy">
                 {WORKSHOP.prix.standard}
               </p>
-              <p className="mt-4 text-muted leading-relaxed">Participez aux deux journées, appliquez la méthode pendant les exercices et repartez avec les supports nécessaires pour poursuivre le travail.</p>
+                <p className="mt-4 text-muted leading-relaxed">Participez aux deux journées, appliquez la méthode pendant les exercices et repartez avec les supports nécessaires pour poursuivre le travail.</p>
 
               <ButtonLink
                 href={WORKSHOP.liens.standard}

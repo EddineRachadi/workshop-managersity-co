@@ -7,6 +7,7 @@ interface Jour {
   date: string;
   titre: string;
   points: string[];
+  production: string;
 }
 
 const JOURS: Jour[] = [
@@ -21,8 +22,8 @@ const JOURS: Jour[] = [
       "Distinguer indicateurs de résultat, indicateurs d'alerte et indicateurs réellement actionnables.",
       "Construire un tableau de bord minimal de 8 à 12 indicateurs compris et utilisables par le manager.",
       "Travailler sur des cas concrets : chiffre d'affaires, marge, cash, stocks, clients, qualité et performance d'équipe.",
-      "Production attendue : livrable : votre cartographie des données et l'ossature de votre tableau de bord minimal.",
     ],
+    production: "Livrable : votre cartographie des données et l’ossature de votre tableau de bord minimal.",
   },
   {
     label: "Jour 2",
@@ -35,8 +36,8 @@ const JOURS: Jour[] = [
       "Accélérer la préparation du reporting et produire des synthèses de décision plus utiles.",
       "Concevoir des alertes et des automatisations simples, avec des règles de validation et de contrôle qualité.",
       "Prioriser les cas d'usage par valeur et effort, puis installer un rituel de pilotage Data & AI.",
-      "Production attendue : livrable : vos 2 à 3 cas d'usage prioritaires et votre plan Data & AI à 90 jours.",
     ],
+    production: "Livrable : vos 2 à 3 cas d’usage prioritaires et votre plan Data & AI à 90 jours.",
   },
 ];
 
@@ -83,6 +84,13 @@ export function WorkshopProgramme() {
                   </li>
                 ))}
               </ol>
+
+              <div className="mt-7 border-t border-paper-line pt-5">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gold">
+                  Production attendue
+                </p>
+                <p className="mt-2 text-navy leading-relaxed">{jour.production}</p>
+              </div>
             </div>
           </Reveal>
         ))}

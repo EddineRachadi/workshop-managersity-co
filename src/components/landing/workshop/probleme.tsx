@@ -4,8 +4,8 @@ import { SectionHead } from "./section-head";
 
 const POINTS = [
   "Des rapports qui expliquent le passé une fois que le problème s'est déjà installé.",
-  "Des tableaux de bord chargés d'indicateurs sans lien clair vers les décisions à prendre.",
-  "Des chiffres contradictoires entre finance, commercial et opérations.",
+  "Des tableaux de bord chargés d'indicateurs, avec peu de liens vers les décisions à prendre.",
+  "Des chiffres contradictoires entre la finance, le commercial et les opérations.",
   "Des analyses qui mobilisent les équipes pendant plusieurs heures ou plusieurs jours.",
   "Des décisions importantes prises avec des données incomplètes, tardives ou mal interprétées.",
 ];
