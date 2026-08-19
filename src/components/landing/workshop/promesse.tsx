@@ -5,11 +5,11 @@ import { SectionHead } from "./section-head";
 const CAPACITES = [
   {
     title: "Cartographier vos données utiles",
-    desc: "Identifier les sources déjà disponibles et les relier à vos enjeux de chiffre d'affaires, marge, cash, stocks, clients, qualité ou RH.",
+    desc: "Identifier les sources déjà disponibles et les relier à vos enjeux de chiffre d’affaires, marge, cash, stocks, clients, qualité, RH ou exécution.",
   },
   {
-    title: "Poser les bonnes questions",
-    desc: "Passer de « que s'est-il passé ? » à « pourquoi ? », « que va-t-il se passer ? » et « que devons-nous faire maintenant ? ».",
+    title: "Poser les questions qui font avancer la décision",
+    desc: "Passer de « que s’est-il passé ? » à « pourquoi ? », « que va-t-il se passer ? » et « que devons-nous faire maintenant ? ».",
   },
   {
     title: "Lire et challenger un indicateur",
@@ -17,11 +17,11 @@ const CAPACITES = [
   },
   {
     title: "Construire un tableau de bord minimal",
-    desc: "Retenir 8 à 12 indicateurs réellement actionnables et organiser un rituel de pilotage autour d'eux.",
+    desc: "Retenir 8 à 12 indicateurs réellement actionnables et organiser un rituel de pilotage autour de ces informations.",
   },
   {
     title: "Exploiter l'IA dans vos analyses",
-    desc: "Interroger les données en langage naturel, accélérer l'analyse des écarts et préparer des synthèses de décision.",
+    desc: "Interroger les données en langage naturel, accélérer l’analyse des écarts, produire des synthèses et préparer des scénarios.",
   },
   {
     title: "Prioriser et automatiser les bons cas d'usage",

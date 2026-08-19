@@ -11,14 +11,14 @@ const SITE_URL = "https://managersity.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Workshop IA MANAGERSITY — Recruter ses employés IA dans son métier",
+  title: "DATA ANALYTICS & AI | MANAGERSITY",
   description:
-    "Workshop IA en ligne, en live. Identifier les tâches à déléguer à l'IA, créer des assistants, agents et capacités IA spécialisés, puis structurer un système de travail augmenté. Pour managers, dirigeants et professionnels.",
+    "Deux jours d’immersion pour transformer vos données en décisions plus rapides, en performances mieux pilotées et en opérations intelligemment automatisées.",
   keywords: [
-    "workshop IA",
-    "formation IA",
-    "assistants IA",
-    "agents IA",
+    "Data Analytics",
+    "AI workshop",
+    "données et décision",
+    "performance management",
     "MANAGERSITY",
     "intelligence artificielle",
     "management",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "MANAGERSITY" }],
   openGraph: {
-    title: "Workshop IA MANAGERSITY — Recruter ses employés IA dans son métier",
+    title: "DATA ANALYTICS & AI | MANAGERSITY",
     description:
-      "Identifier les tâches à déléguer à l'IA, créer des assistants, agents et capacités IA spécialisés, puis structurer un système de travail augmenté.",
+      "Deux jours d’immersion pour transformer vos données en décisions plus rapides, en performances mieux pilotées et en opérations intelligemment automatisées.",
     url: SITE_URL,
     siteName: "MANAGERSITY",
     locale: "fr_FR",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Workshop IA MANAGERSITY",
+    title: "DATA ANALYTICS & AI | MANAGERSITY",
     description:
-      "Workshop IA en ligne, en live, pour managers, dirigeants et professionnels.",
+      "Vous avez déjà des données : ventes, finances, opérations, clients, équipes, projets. Pendant deux sessions pratiques, vous apprendrez à les structurer, à les lire avec rigueur, à en tirer des décisions actionnables et à utiliser l’IA pour accélérer vos analyses, vos alertes et vos reportings — sans avoir besoin d’être data scientist.",
   },
 };
 

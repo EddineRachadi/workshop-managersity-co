@@ -3,16 +3,17 @@ import { Fraunces, JetBrains_Mono } from "next/font/google";
 import { WorkshopHeader } from "@/components/landing/workshop/workshop-header";
 import { ScrollProgress, BackToTop } from "@/components/landing/workshop/motion";
 import { WorkshopHero } from "@/components/landing/workshop/hero";
-import { WorkshopChiffres } from "@/components/landing/workshop/chiffres";
 import { WorkshopProbleme } from "@/components/landing/workshop/probleme";
 import { WorkshopParadigme } from "@/components/landing/workshop/paradigme";
 import { WorkshopPromesse } from "@/components/landing/workshop/promesse";
+import { WorkshopSignature } from "@/components/landing/workshop/signature";
 import { WorkshopProgramme } from "@/components/landing/workshop/programme";
 import { WorkshopInclus } from "@/components/landing/workshop/inclus";
 import { WorkshopFormules } from "@/components/landing/workshop/formules";
 import { WorkshopComparaison } from "@/components/landing/workshop/comparaison";
 import { WorkshopPourQui } from "@/components/landing/workshop/pour-qui";
 import { WorkshopPasPourVous } from "@/components/landing/workshop/pas-pour-vous";
+import { WorkshopAnimateur } from "@/components/landing/workshop/animateur";
 import { WorkshopCredibilite } from "@/components/landing/workshop/credibilite";
 import { WorkshopFaq } from "@/components/landing/workshop/faq";
 import { WorkshopCtaFinal } from "@/components/landing/workshop/cta-final";
@@ -77,20 +78,25 @@ export default function Home() {
       <WorkshopHeader />
       <main>
         <WorkshopHero />
-        <WorkshopChiffres />
         <WorkshopProbleme />
         <WorkshopParadigme />
         <WorkshopPromesse />
+        <WorkshopSignature />
+        <WorkshopCtaBand
+          kicker=""
+          title="Je veux passer de la donnée à l'action"
+        />
         <WorkshopProgramme />
         <WorkshopCtaBand
-          title="Je veux passer de la donnée à l'action."
-          subtitle="Apprenez à mieux lire vos indicateurs, détecter les écarts, construire des tableaux de bord utiles et utiliser l'IA pour accélérer vos analyses, vos reportings et certaines opérations."
+          kicker=""
+          title="Réserver ma place pour les 17 et 18 septembre"
         />
         <WorkshopInclus />
         <WorkshopFormules />
         <WorkshopComparaison />
         <WorkshopPourQui />
         <WorkshopPasPourVous />
+        <WorkshopAnimateur />
         <WorkshopCredibilite />
         <WorkshopFaq />
         <WorkshopCtaFinal />

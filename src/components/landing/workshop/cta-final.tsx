@@ -10,16 +10,16 @@ export function WorkshopCtaFinal() {
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
         <Reveal variant="zoom">
           <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-gold">
-            Deux jours pour passer de la donnée à l'action
+            Deux jours pour passer de la donnée à l’action
           </p>
           <h2 className="mt-6 font-display text-[2.1rem] sm:text-[3rem] font-semibold leading-[1.08] tracking-[-0.01em]">
-            Apprenez à mieux lire vos indicateurs, détecter plus tôt les écarts,
-            construire des tableaux de bord utiles et utiliser l&apos;IA pour
-            accélérer vos analyses, reportings et opérations.
+            Apprenez à mieux lire vos indicateurs, à détecter plus tôt les écarts,
+            à construire des tableaux de bord utiles et à utiliser l&apos;IA pour
+            accélérer vos analyses, vos reportings et certaines opérations.
           </h2>
           <p className="mt-7 max-w-2xl text-lg text-white/70 leading-relaxed">
             17–18 septembre 2026 · En ligne, en direct · Inscriptions jusqu&apos;au
-            10 septembre 2026.
+            10 septembre 2026
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-5">

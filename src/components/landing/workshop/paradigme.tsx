@@ -1,39 +1,31 @@
 import { Reveal } from "@/components/ui/reveal";
 
+const MOUVEMENTS = [
+  "1. Voir : repérer les données déjà présentes dans votre organisation et les relier aux décisions que vous devez prendre.",
+  "2. Comprendre : choisir les bons indicateurs, lire les tendances, désagréger les moyennes et rechercher les causes réelles.",
+  "3. Anticiper : utiliser les analytics et l’IA pour détecter plus tôt les écarts, les risques et les opportunités.",
+  "4. Automatiser : accélérer les analyses récurrentes, les reportings, les alertes et certaines actions opérationnelles.",
+];
+
 export function WorkshopParadigme() {
   return (
-    <section className="relative overflow-hidden bg-navy text-white py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-navy py-20 text-white sm:py-28">
       <div className="dossier-grid-light pointer-events-none absolute inset-0 opacity-60" />
-      <div className="pointer-events-none absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-green/12 blur-3xl" />
-
-      <div className="relative max-w-[1120px] mx-auto px-4 sm:px-6">
+      <div className="relative mx-auto max-w-[1120px] px-4 sm:px-6">
         <Reveal variant="zoom">
           <p className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-gold">
             <span>02</span>
             <span className="h-px w-7 bg-white/25" aria-hidden="true" />
-            <span className="text-white/70">Le vrai sujet</span>
+            <span className="text-white/70">Les quatre mouvements</span>
           </p>
-
-          <blockquote className="mt-7 max-w-4xl font-display text-[1.9rem] sm:text-[2.7rem] font-medium leading-[1.12] tracking-[-0.01em]">
-            La valeur apparaît lorsque la donnée modifie une décision, un arbitrage
-            ou une action.
-            <span className="text-white/55">
-              {" "}Le workshop vous apprend à construire ce passage de manière structurée.
-            </span>
-          </blockquote>
-
-          <div className="mt-10 grid sm:grid-cols-2 gap-x-12 gap-y-5 max-w-3xl text-white/65 leading-relaxed">
-            <p>
-              Vos données existent déjà. Le vrai enjeu est de les relier à votre
-              pilotage, à vos priorités, à vos risques et à votre capacité à
-              agir avec précision.
-            </p>
-            <p>
-              À travers quatre mouvements — voir, comprendre, anticiper,
-              automatiser — vous apprenez à transformer l&apos;information en
-              décision et action, sans jargon inutile ni sur-technique.
-            </p>
-          </div>
+          <h2 className="mt-7 max-w-4xl font-display text-[1.9rem] font-medium leading-[1.12] sm:text-[2.7rem]">
+            De la donnée disponible à l’action automatisée
+          </h2>
+          <ol className="mt-10 grid max-w-4xl gap-5 text-lg leading-relaxed text-white/70 sm:grid-cols-2">
+            {MOUVEMENTS.map((mouvement) => (
+              <li key={mouvement}>{mouvement}</li>
+            ))}
+          </ol>
         </Reveal>
       </div>
     </section>

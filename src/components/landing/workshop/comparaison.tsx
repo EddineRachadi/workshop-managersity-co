@@ -4,38 +4,31 @@ import { SectionHead } from "./section-head";
 
 interface Ligne {
   label: string;
-  standard: boolean;
-  premium: boolean;
+  standard: string;
+  premium: string;
 }
 
 const LIGNES: Ligne[] = [
-  { label: "2 journées de workshop en direct", standard: true, premium: true },
-  { label: "Supports, cahier de travail et datasets", standard: true, premium: true },
-  { label: "Modèles de tableaux de bord", standard: true, premium: true },
-  { label: "Replay du workshop", standard: true, premium: true },
-  { label: "Certificat de participation", standard: true, premium: true },
-  { label: "Cours vidéo complet sur MANAGERSITY", standard: false, premium: true },
-  { label: "Kits d'application par fonction", standard: false, premium: true },
-  { label: "2 cliniques d'implémentation", standard: false, premium: true },
-  { label: "Évaluation de maturité Data & AI", standard: false, premium: true },
-  { label: "Plan d'action sur 90 jours", standard: false, premium: true },
-  { label: "Tarif individuel", standard: true, premium: true },
+  { label: "2 journées de workshop en direct", standard: "Inclus", premium: "Inclus" },
+  { label: "Supports, cahier de travail et datasets", standard: "Inclus", premium: "Inclus" },
+  { label: "Modèles de tableaux de bord", standard: "Inclus", premium: "Inclus" },
+  { label: "Replay du workshop", standard: "30 jours", premium: "30 jours" },
+  { label: "Certificat de participation", standard: "Inclus", premium: "Inclus" },
+  { label: "Cours vidéo complet sur MANAGERSITY", standard: "—", premium: "Inclus avant le workshop" },
+  { label: "Kits d'application par fonction", standard: "—", premium: "Inclus" },
+  { label: "Cliniques d'implémentation", standard: "—", premium: "2 sessions" },
+  { label: "Évaluation et plan d'action Data & AI", standard: "—", premium: "90 jours" },
+  { label: "Tarif individuel", standard: "97 000 FCFA", premium: "119 000 FCFA" },
 ];
 
-function Mark({ on }: { on: boolean }) {
-  if (on) {
+function Mark({ value }: { value: string }) {
+  if (value !== "—") {
     return (
-      <span className="mx-auto flex h-5 w-5 items-center justify-center text-green">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.75">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-        </svg>
-      </span>
+      <span className="text-green">{value}</span>
     );
   }
   return (
-    <span className="mx-auto block font-mono text-muted/40" aria-label="Non inclus">
-      —
-    </span>
+    <span className="font-mono text-muted/40" aria-label="Non inclus">{value}</span>
   );
 }
 
@@ -44,7 +37,7 @@ export function WorkshopComparaison() {
     <Section className="bg-paper">
       <Reveal variant="fade">
         <SectionHead
-          index="08"
+          index="09"
           eyebrow="Comparatif"
           title="Standard ou Premium, en un coup d'œil."
         />
@@ -75,10 +68,10 @@ export function WorkshopComparaison() {
                 >
                   <td className="px-3 py-3.5 text-navy sm:px-5">{ligne.label}</td>
                   <td className="px-2 py-3.5 text-center sm:px-5">
-                    <Mark on={ligne.standard} />
+                    <Mark value={ligne.standard} />
                   </td>
                   <td className="bg-paper/60 px-2 py-3.5 text-center sm:px-5">
-                    <Mark on={ligne.premium} />
+                    <Mark value={ligne.premium} />
                   </td>
                 </tr>
               ))}

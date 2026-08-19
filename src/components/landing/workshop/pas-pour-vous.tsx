@@ -36,8 +36,7 @@ export function WorkshopPasPourVous() {
           <SectionHead
             index="10"
             eyebrow="Soyons clairs"
-            title="Ce workshop n'est pas pour vous si…"
-            intro="Par honnêteté sur ce que vous y trouverez, voici les cas où il ne conviendra pas."
+            title="Le workshop vous conviendra moins si…"
           />
         </Reveal>
       </div>

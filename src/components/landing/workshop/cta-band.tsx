@@ -21,9 +21,11 @@ export function WorkshopCtaBand({
             <div className="pointer-events-none absolute -right-16 -top-24 h-72 w-72 rounded-full bg-gold/15 blur-3xl" />
             <div className="relative z-10 flex flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
               <div className="max-w-xl">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold">
-                {kicker}
-                </p>
+                {kicker && (
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold">
+                    {kicker}
+                  </p>
+                )}
                 <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-[2.2rem]">
                   {title}
                 </h2>

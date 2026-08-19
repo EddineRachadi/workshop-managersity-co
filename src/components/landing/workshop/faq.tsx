@@ -36,8 +36,16 @@ const FAQS = [
     a: "Oui, un certificat de participation est prévu selon les conditions définies par MANAGERSITY.",
   },
   {
+    q: "Que se passe-t-il si je ne peux pas suivre une partie du direct ?",
+    a: "Vous pourrez revoir les séquences manquées pendant la période d’accès au replay. Les exercices live restent recommandés pour bénéficier pleinement de la progression.",
+  },
+  {
     q: "Puis-je inscrire plusieurs collaborateurs ?",
     a: "Oui. Les inscriptions individuelles et groupées sont possibles. Pour un comité de direction ou une équipe, contactez MANAGERSITY au +221 78 190 74 84 afin d'obtenir une proposition et une facture pro forma.",
+  },
+  {
+    q: "Quels moyens de paiement sont disponibles ?",
+    a: "Les moyens de paiement disponibles seront affichés au moment de la réservation. Une facture pro forma peut être demandée pour les inscriptions prises en charge par une organisation.",
   },
 ];
 
@@ -45,7 +53,7 @@ export function WorkshopFaq() {
   return (
     <Section id="faq" className="bg-paper">
       <Reveal variant="fade">
-        <SectionHead index="12" eyebrow="FAQ" title="Questions fréquentes." />
+        <SectionHead index="13" eyebrow="FAQ" title="Questions fréquentes" />
       </Reveal>
 
       <Reveal delay={80}>

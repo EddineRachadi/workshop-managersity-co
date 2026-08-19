@@ -25,8 +25,8 @@ export function WorkshopProbleme() {
         <SectionHead
           index="01"
           eyebrow="Le constat"
-          title="Vos données existent déjà. Leur valeur reste souvent bloquée."
-          intro="Votre organisation produit chaque jour une quantité importante d'informations : ventes, finances, opérations, clients, équipes, projets, stocks, réclamations, recrutements, tableaux Excel. La difficulté apparaît au moment de transformer cette matière en réponses rapides à des questions de management."
+          title="Vos données existent déjà. Leur valeur reste souvent bloquée dans des fichiers, des outils et des rapports dispersés."
+          intro="Votre organisation produit chaque jour une quantité importante d’informations : commandes, factures, paiements, stocks, réclamations, campagnes, projets, présences, recrutements et tableaux Excel. La difficulté apparaît au moment de transformer cette matière en réponses rapides à des questions de management."
         />
       </Reveal>
 

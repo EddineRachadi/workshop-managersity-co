@@ -10,20 +10,11 @@ const STANDARD_INCLUS = [
   "Modèles de tableaux de bord",
   "Replay accessible pendant 30 jours",
   "Certificat de participation",
-  "Approche pratique sur les cas métier",
-];
-
-const STANDARD_NON_INCLUS = [
-  "Cours vidéo complet sur MANAGERSITY",
-  "Kits d'application par fonction",
-  "Cliniques d'implémentation",
-  "Évaluation de maturité Data & AI",
-  "Plan d'action sur 90 jours",
 ];
 
 const PREMIUM_INCLUS = [
-  "Tout ce qui est inclus dans Standard",
-  "Cours vidéo complet accessible avant le workshop",
+  "Tous les avantages de la formule Standard",
+  "Cours vidéo complet accessible sur MANAGERSITY avant le workshop",
   "Kits d'application par fonction",
   "Deux cliniques d'implémentation",
   "Évaluation de maturité Data & AI",
@@ -45,23 +36,13 @@ function Tick({ tone = "green" }: { tone?: "green" | "gold" }) {
   );
 }
 
-function Dash() {
-  return (
-    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center text-muted/50">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-        <path strokeLinecap="round" d="M5 12h14" />
-      </svg>
-    </span>
-  );
-}
-
 export function WorkshopFormules() {
   return (
     <>
       <Section id="formules" className="bg-paper">
         <Reveal variant="fade">
           <SectionHead
-            index="07"
+            index="08"
             eyebrow="Formules"
             title="Deux façons de participer."
             intro="Suivre le live, appliquer les méthodes et repartir avec les outils pour transformer vos données en décisions utiles."
@@ -77,10 +58,7 @@ export function WorkshopFormules() {
               <p className="mt-5 font-display text-[2.6rem] font-semibold leading-none text-navy">
                 {WORKSHOP.prix.standard}
               </p>
-              <p className="mt-4 text-muted leading-relaxed">
-                Participez aux deux journées, appliquez la méthode pendant les
-                exercices et repartez avec les supports nécessaires pour poursuivre le travail.
-              </p>
+              <p className="mt-4 text-muted leading-relaxed">Participez aux deux journées, appliquez la méthode pendant les exercices et repartez avec les supports nécessaires pour poursuivre le travail.</p>
 
               <ButtonLink
                 href={WORKSHOP.liens.standard}
@@ -101,17 +79,6 @@ export function WorkshopFormules() {
                 ))}
               </ul>
 
-              <p className="mt-7 mb-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
-                Non inclus
-              </p>
-              <ul className="space-y-3">
-                {STANDARD_NON_INCLUS.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm">
-                    <Dash />
-                    <span className="text-muted leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </Reveal>
 

@@ -10,7 +10,6 @@ const ELEMENTS = [
   "Une grille de lecture des indicateurs et des écarts.",
   "Une matrice de priorisation valeur / effort.",
   "Un canevas de plan Data & AI à 90 jours.",
-  "Replay et ressources selon la formule choisie.",
 ];
 
 function Tick() {
@@ -28,7 +27,7 @@ export function WorkshopInclus() {
     <Section className="bg-white">
       <Reveal variant="fade">
         <SectionHead
-          index="06"
+          index="07"
           eyebrow="Ce que vous recevez"
           title="Le kit de travail du workshop."
         />

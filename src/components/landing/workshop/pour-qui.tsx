@@ -2,7 +2,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHead } from "./section-head";
 
 const PROFILES = [
-  "Dirigeants",
+  "Dirigeants et directeurs généraux",
   "Membres de comité de direction",
   "Directeurs et responsables de département",
   "Managers opérationnels et chefs de service",
@@ -10,7 +10,7 @@ const PROFILES = [
   "Responsables commerciaux et marketing",
   "Responsables opérations, supply chain, qualité et service client",
   "Responsables RH et transformation",
-  "Consultants, entrepreneurs et professionnels",
+  "Consultants, entrepreneurs et professionnels produisant régulièrement des analyses ou des reportings",
 ];
 
 export function WorkshopPourQui() {
@@ -19,7 +19,7 @@ export function WorkshopPourQui() {
       <div className="max-w-[1120px] mx-auto px-4 sm:px-6">
         <Reveal variant="zoom">
           <SectionHead
-            index="09"
+            index="10"
             eyebrow="Pour qui ?"
             title="Pensé pour les profils qui décident, pilotent et produisent."
             intro="Aucun prérequis technique. Le workshop est adapté dès lors que votre fonction implique des indicateurs, des reportings, des analyses, des arbitrages ou des opérations à suivre."

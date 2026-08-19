@@ -8,7 +8,7 @@ export function WorkshopCredibilite() {
         <Reveal variant="left">
           <div>
             <p className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-green">
-              <span className="text-gold">11</span>
+              <span className="text-gold">12</span>
               <span className="h-px w-7 bg-paper-line" aria-hidden="true" />
               <span>À propos</span>
             </p>
@@ -16,7 +16,7 @@ export function WorkshopCredibilite() {
               MANAGERSITY by H&amp;C
             </h2>
             <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-              Data Analytics · IA · Performance
+              MANAGERSITY by H&amp;C
             </p>
           </div>
         </Reveal>
@@ -33,10 +33,6 @@ export function WorkshopCredibilite() {
               ses programmes, MANAGERSITY aide les professionnels d&apos;Afrique
               francophone à progresser de manière continue et à transformer les
               apprentissages en pratiques de travail.
-            </p>
-            <p>
-              Ce workshop s&apos;inscrit dans cette logique, avec une approche
-              orientée décision, performance et transformation opérationnelle.
             </p>
           </div>
         </Reveal>
