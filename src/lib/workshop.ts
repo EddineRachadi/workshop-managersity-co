@@ -16,8 +16,8 @@ export const WORKSHOP = {
   // Liens boutique (checkout) par formule.
   liens: {
     standard:
-      "https://shop.managersity.com/produit/the-ai-digital-workshop-30-31-juillet-2026-standard/",
+      "https://shop.managersity.com/produit/data-analytics-ai-workshop-standard/",
     premium:
-      "https://shop.managersity.com/produit/the-ai-digital-workshop-30-31-juillet-2026-premium/",
+      "https://shop.managersity.com/produit/data-analytics-ai-workshop-premium/",
   },
 } as const;
